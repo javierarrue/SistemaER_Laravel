@@ -64,7 +64,7 @@ class C_EncuestaDocentes extends Controller
             if($respuestas==null){
                 return view("MenuDocentes");
             }
-            return redirect()->back()->withErrors("Ya hiciste la encuesta bro :(");
+            return redirect()->back()->withErrors("Ya contesto la encuesta para ese Grupo y Asignatura");
 
 
         }
