@@ -41,7 +41,7 @@
                 <ul class="menu_rastros">
 
                     <li class="rastro_item">
-                        <a href="{{route('MenuEncuesta')}}" class="rastro_link">Menú</a>
+                        <a href="{{route('MenuDocentes')}}" class="rastro_link rastro_link_activo">Menú</a>
                     </li>
 
                 </ul>

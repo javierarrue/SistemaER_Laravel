@@ -45,7 +45,7 @@
                 </li>
 
                 <li class="rastro_item">
-                    <a href="{{route('AplicarEncuesta')}}" class="rastro_link">Aplicación de la encuesta</a>
+                    <a href="{{route('AplicarEncuesta')}}" class="rastro_link rastro_link_activo">Aplicación de la encuesta</a>
                 </li>
 
 
@@ -91,7 +91,7 @@
                         <br><br>
 
                         <a href="{{route('EncuestaDocentes')}}" class="btn btn-success btn-lg btn-block">Aplicar Encuesta</a>
-                        <a href="" class="btn btn-success btn-lg btn-block">Aplicar Encuesta</a>
+                        <!--<a href="" class="btn btn-success btn-lg btn-block">Aplicar Encuesta</a>-->
 
 
                 </form>

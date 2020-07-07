@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css_personal/AplicarEncuesta.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  
+
 
 </head>
 
@@ -85,11 +85,11 @@
         <!---------------------------------------------------------------------------------------------------------------->
         <!-- AQUI VA CONTENIDO DE LA PAGINA-->
         <div class="contenido">
-            
+
             <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
 
                 <form class="encuesta">
-                
+
                    <center> <h2>Aplicación de la Encuesta</h2></center>
                         <br><br>
                     <div class="form-row">
@@ -275,12 +275,12 @@
                             <option value="176" name="">[8391] TRABAJO DE GRADUACIÓN II</option>
                             <option value="177" name="">[8489] TRABAJO DE GRADUACIÓN I</option>
                             <option value="178" name="">[8490] TRABAJO DE GRADUACIÓN II</option>
-                              
+
                             </select>
 
 
                           </div>
-                    
+
 
                         <div class="form-group col-md-4">
                             <label for="inputState">Grupo:</label>
@@ -460,7 +460,7 @@
                               <option value="172" name=""> 1SF133</option>
                               <option value="173" name="">1SF241</option>
                               <option value="174" name="">1SF242</option>
-                              
+
 
                         </select>
                         </div>
@@ -468,7 +468,7 @@
                         <div class="form-group col-md-4">
                             <label for="inputState">Sede: </label>
                             <select id="inputState" class="form-control">
-                                <option disabled selected>Ninguno seleccionado</option>               
+                                <option disabled selected>Ninguno seleccionado</option>
                                 <option value="1">Campus Metropolitano “Dr. Víctor Levi Sasso”</option>
                                 <option value="2">Centro Regional de Azuero</option>
                                 <option value="3">Centro Regional de Bocas del Toro</option>
@@ -483,14 +483,14 @@
                           <div class="form-group col-md-4">
                             <label for="inputState">Carrera:</label>
                             <select id="inputState" class="form-control">
-                                <option disabled selected>Ninguno seleccionado</option>    
-                                <option value="1" name="">Licenciatura en Desarrollo de Software</option>    
-                                <option value="2" name="">Licenciatura en Redes Informáticas</option>    
-                                <option value="3" name=""> Licenciatura en Ingeniería de Sistemas y Computación</option>    
-                                <option value="4" name=""> Licenciatura en Ingeniería de Sistemas de Información</option>    
-                                <option value="5" name=""> Licenciatura en Ingeniería de Software</option>    
-                                <option value="6" name=""> Licenciatura en Informática Aplicada a la Educación</option>    
-                                <option value="7" name=""> Técnico en Informática para la Gestión Empresarial</option>    
+                                <option disabled selected>Ninguno seleccionado</option>
+                                <option value="1" name="">Licenciatura en Desarrollo de Software</option>
+                                <option value="2" name="">Licenciatura en Redes Informáticas</option>
+                                <option value="3" name=""> Licenciatura en Ingeniería de Sistemas y Computación</option>
+                                <option value="4" name=""> Licenciatura en Ingeniería de Sistemas de Información</option>
+                                <option value="5" name=""> Licenciatura en Ingeniería de Software</option>
+                                <option value="6" name=""> Licenciatura en Informática Aplicada a la Educación</option>
+                                <option value="7" name=""> Técnico en Informática para la Gestión Empresarial</option>
 
                             </select>
                           </div>
@@ -498,9 +498,9 @@
                           <div class="form-group col-md-4">
                             <label for="inputState">Semestre:</label>
                             <select id="inputState" class="form-control">
-                                <option disabled selected>Ninguno seleccionado</option>    
-                                <option value="I" name="">I Semestre</option>    
-                                <option value="II" name="">II Semestre</option>    
+                                <option disabled selected>Ninguno seleccionado</option>
+                                <option value="I" name="">I Semestre</option>
+                                <option value="II" name="">II Semestre</option>
 
                             </select>
                           </div>
@@ -512,11 +512,11 @@
 
 
                 </form>
-                       
+
             </div>
-            
-            <button type="button" class="btn btn-success float-right" >Enviar Respuestas</button>
-            
+
+            <button type="button" class="btn btn-success float-right" >Continuar con la encuesta</button>
+
         <div>
             <a href="{{route('AplicarEncuesta')}}" class="btn btn-success">Volver</a>
         </div>
