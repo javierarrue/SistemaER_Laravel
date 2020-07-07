@@ -1,0 +1,313 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+
+    background-color: #E9ECF4;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+/*-------------Contenedor principal-----------------*/
+
+.contenedor{
+
+overflow-y: hidden;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr); /*Usando grid para estructurar la pagina*/
+    grid-template-rows: repeat(3,auto);
+    /*Definiendo la esctructura de la pagina*/
+    grid-template-areas: "header header header header header"
+                          "menu_rastros menu_rastros menu_rastros menu_rastros menu_rastros"
+                          "verticall contenido contenido contenido contenido";
+
+}
+
+/*-------------Contenedor principal-----------------*/
+
+header{
+
+    grid-area: header;
+
+}
+
+/*--------IMAGENES------------*/
+.imagenesHorizontales{
+    width: 100%;
+    background-color: rgb(61, 182, 71);
+    display: flex; /*Usando flexbox para alinear los elementos al centro*/
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+header img{
+    max-height: 150px;
+}
+
+aside{
+    grid-area:verticall;
+}
+
+.contenedor_imagen_vertical{
+    text-align: center;
+    margin-left: 20px;
+    border-right:2px solid rgb(199, 199, 199);
+    background-color: rgb(253, 253, 253);
+    font-size: 15px;
+}
+
+.img_vertical{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.imgFoto
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+aside a{
+    color:rgb(0, 153, 255);
+}
+
+/*--------IMAGENES------------*/
+
+
+/*------------- Menu de rastros --------------*/
+/*Contenedor principal*/
+.contenedor_menu_rastros{
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-area:menu_rastros;
+    background-color: rgb(226, 223, 223);
+    padding:0.5% 0% 0.5% 2%;
+    position: relative;
+}
+
+.menu_rastros{
+    display: inline-block;
+}
+
+.nombre_usuario{
+    display: inline-block;
+    position: absolute;
+    right:0;
+    margin-right: 20px;
+}
+
+
+.rastro_item{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.rastro_link{
+    color:rgb(70, 69, 69);
+    font-size: large;
+    text-decoration: none;
+}
+
+.rastro_link:hover{
+    color:rgb(0, 0, 0);
+}
+
+/*Selector que ingresa un: ">" en medio de cada item, EXCEPTO del ultimo: Home>Pag1>Pag2 */
+.rastro_item:not(:last-of-type)::after {
+    content:">";
+    margin: 0px 5px;
+    color:rgb(121, 121, 121);
+}
+
+.rastro_link_activo{
+    font-weight: bold;
+}
+
+/*------------- Menu de rastros --------------*/
+
+/*Contendor del contenido de la pagina*/
+.contenido{
+width:100%;
+overflow-y:auto;
+
+    grid-area:contenido;
+    background-color: rgb(253, 253, 253);
+    padding: 0px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+
+/*------------------------------ RESPONSIVE ---------------------------*/
+/*Hay distintos @media para poder ajustar el tamaño de la imagen una vez empieza
+disminuir el tamaño del dispositivo*/
+@media screen and (max-width: 1426px)
+{
+    header img{
+        max-height: 100px !important;
+    }
+}
+
+@media screen and (max-width:970px)
+{
+    .nombre_usuario{
+        display: block;
+        position: relative;
+
+        margin-top: 5px !important;
+    }
+}
+
+@media screen and (max-width: 948px)
+{
+    header img{
+        max-height: 80px !important;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .contenedor{
+
+        /*Definiendo la esctructura de la pagina*/
+        grid-template-areas: "header header header header"
+                            "menu_rastros menu_rastros menu_rastros menu_rastros"
+                            "contenido contenido contenido contenido";
+
+
+    }
+
+    .contenedor_menu_rastros a
+    {
+        font-size: 13px !important;
+    }
+
+
+    .contenedor_imagen_vertical{
+        display: none !important;
+    }
+
+.contenido{
+    margin-right: 0;
+
+}
+
+header img{
+    max-height: 50px !important;
+}
+
+}
+
+@media screen and (max-width: 493px)
+{
+    .contenedor_menu_rastros a
+    {
+        font-size: 11px !important;
+    }
+
+    header img{
+        max-height: 30px !important;
+    }
+
+}
+
+/*--------------------------------- RESPONSIVE -----------------------------*/
+
+h2{
+color:white;
+background-color:green;
+text-align:center;
+padding: 10px;
+font-weight:100;
+font-size:30px;
+border-top-left-radius:7px;
+border-top-right-radius:7px;
+border-bottom:5px solid #F3FC8C;
+}
+
+.form-register{
+width:100%;
+max-width:600px;
+margin:auto;
+background:white;
+border-radius:7px;
+
+}
+
+.contenedor-inputs{
+padding: 5px 30px;
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between !important;
+}
+
+input{
+margin-bottom: 15px !important;
+padding:10px;
+font-size:16px;
+border-radius:3px;
+border:1px solid darkgray;
+}
+.input-50{
+width: 100%;
+}
+.input-100{
+width: 100%;
+}
+
+.input-101{
+width: 100%;
+}
+
+.input-102{
+width: 100%;
+}
+
+.btn-enviar{
+background-color:#16AB26;
+color:#fff;
+margin:auto;
+padding:10px 40px;
+cursor: pointer;
+font-size:19px;
+}
+
+.btn-enviar:active{
+
+transform:scale(1.05);
+}
+
+.btn-enviar:hoover{
+background-color:#0A6514 !important;
+}
+.botonvolver{
+position: absolute;
+top: 94%;
+}
+
+#agregarPregunta{
+    display: none;
+    width:100%;
+}
+
+.respuesta{
+    width:70%;
+}
+
+#preguntaCerrada{
+
+margin-bottom:10px;
+}

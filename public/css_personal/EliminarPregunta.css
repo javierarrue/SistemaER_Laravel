@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #E9ECF4;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/*-------------Contenedor principal-----------------*/
+
+.contenedor{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr); /*Usando grid para estructurar la pagina*/
+    grid-template-rows: repeat(3,auto);
+    /*Definiendo la esctructura de la pagina*/
+    grid-template-areas: "header header header header header"
+                          "menu_rastros menu_rastros menu_rastros menu_rastros menu_rastros"
+                          "verticall contenido contenido contenido contenido";
+}
+
+/*-------------Contenedor principal-----------------*/
+
+header{
+
+    grid-area: header;
+
+} 
+
+/*--------IMAGENES------------*/
+.imagenesHorizontales{
+    width: 100%;
+    background-color: rgb(61, 182, 71);
+    display: flex; /*Usando flexbox para alinear los elementos al centro*/
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+header img{
+    max-height: 150px;
+}
+
+aside{
+    grid-area:verticall;
+}
+
+.contenedor_imagen_vertical{
+    text-align: center;
+    margin-left: 20px;
+    border-right:2px solid rgb(199, 199, 199);
+    background-color: rgb(253, 253, 253);
+    font-size: 15px;
+}
+
+.img_vertical{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.imgFoto
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+aside a{
+    color:rgb(0, 153, 255);
+}
+
+/*--------IMAGENES------------*/
+
+
+/*------------- Menu de rastros --------------*/
+/*Contenedor principal*/
+.contenedor_menu_rastros{
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-area:menu_rastros;
+    background-color: rgb(226, 223, 223);
+    padding:0.5% 0% 0.5% 2%;
+    position: relative;
+}
+
+.menu_rastros{
+    display: inline-block;
+}
+
+.nombre_usuario{
+    display: inline-block;
+    position: absolute;
+    right:0;
+    margin-right: 20px;
+}
+
+
+.rastro_item{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.rastro_link{
+    color:rgb(70, 69, 69);
+    font-size: large;
+    text-decoration: none;
+}
+
+.rastro_link:hover{
+    color:rgb(0, 0, 0);
+}
+
+/*Selector que ingresa un: ">" en medio de cada item, EXCEPTO del ultimo: Home>Pag1>Pag2 */
+.rastro_item:not(:last-of-type)::after {
+    content:">";
+    margin: 0px 5px;
+    color:rgb(121, 121, 121);
+}
+
+.rastro_link_activo{
+    font-weight: bold;
+}
+
+/*------------- Menu de rastros --------------*/
+
+/*Contendor del contenido de la pagina*/
+.contenido{
+    margin-right: 20px;
+    grid-area:contenido;
+    background-color: rgb(253, 253, 253);
+    padding: 30px;
+
+}
+
+footer{
+
+    grid-area: footer;
+    background-color: rgb(226, 223, 223);;
+    
+}
+
+/*------------------------------ RESPONSIVE ---------------------------*/
+/*Hay distintos @media para poder ajustar el tamaño de la imagen una vez empieza
+disminuir el tamaño del dispositivo*/
+@media screen and (max-width: 1426px)
+{
+    header img{
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width:970px)
+{
+    .nombre_usuario{
+        display: block;
+        position: relative;
+    
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 948px)
+{
+    header img{
+        max-height: 80px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .contenedor{
+
+        /*Definiendo la esctructura de la pagina*/
+        grid-template-areas: "header header header header"
+                            "menu_rastros menu_rastros menu_rastros menu_rastros"
+                            "contenido contenido contenido contenido";
+                        
+    }
+
+    .contenedor_menu_rastros a
+    {
+        font-size: 13px;
+    }
+ 
+
+    .contenedor_imagen_vertical{
+        display: none;
+    }
+
+.contenido{
+    margin-right: 0;
+}
+
+header img{
+    max-height: 50px;
+}
+
+}
+
+@media screen and (max-width: 493px)
+{
+    .contenedor_menu_rastros a
+    {
+        font-size: 11px;
+    }
+
+    header img{
+        max-height: 30px;
+    }
+}
+
+/*--------------------------------- RESPONSIVE -----------------------------*/
+
+
+/* AQUI EMPIEZA LOS FILTROS */
+
+.años {
+    border: 3px solid black;
+    padding: 15px;
+}
+
+.botonRegresar
+{
+    position: absolute;
+    border-radius: 5px;
+    background-color: #24bb33 ;
+    padding: 10px;
+    color: white;
+    text-align: left;
+}
+
