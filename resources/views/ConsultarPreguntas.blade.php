@@ -22,6 +22,9 @@
         <header>
 
             <?php
+                // Variables
+                //Indice se usara como contador
+                //El idPregunta se usara para captar el id que se consiga de la BD.
                 $indice = 1;
                 $idPregunta = -1;
             ?>
@@ -97,7 +100,11 @@
                 <div class="container">
                 <h6>Click en una pregunta para ver sus respuestas</h6>
                     <div class="row">
+                    <!-- Foreach para listar todas las preguntas-->
                     @foreach ($preguntas as $pregunta)
+                    <!-- mientras el idPregunta ( en la primera vuelta es -1) sea diferente al
+                    ID de pregnta que traigo de la BD, puedes insertar una nueva carta.
+                    Esto se hace debido a que la consulta de la BD trae resultados "repetidos"-->
                     <?php if($idPregunta !== $pregunta->id_pregunta): ?>
                         <div class="col-md-10">
                             <div class="accordion" id="accordionExample">
@@ -112,10 +119,13 @@
 
                                     <div id="collapse<?php echo $indice;?>" class="collapse" aria-labelledby="heading<?php echo $indice;?>" data-parent="#accordionExample">
                                     <div class="card-body">
+                                    <!-- Ahora capturo del idPRegunta de la BD-->
                                       <?php
                                         $idPregunta = $pregunta->id_pregunta;
                                       ?>
                                       <ul>
+                                      <!-- Luego verifico, si el campo de descrip_opcion es diferente a ''
+                                      Si esta vacio esto significa que esta pregunta no tiene opciones.-->
                                         <?php
                                             if( $pregunta->descrip_opcion <>''):
                                         ?>
@@ -132,6 +142,7 @@
                                                 </div>
                                                 <?php endif ?>
                                         @endforeach
+                                        <!-- Si esta vacio muetro un input.-->
                                         <?php else: ?>
                                             <input type="text" class="form-control">
                                         <?php endif ?>
@@ -143,6 +154,7 @@
 
                             </div>
                         </div>
+                        <!-- aumento el indice-->
                         <?php
                             $indice++;
                         ?>
@@ -153,17 +165,6 @@
                 </div>
                 <!-- FIN ACORDEON -->
             </div>
-
-<!--
-                <ul>
-                    @foreach ($preguntas as $pregunta)
-                    <li>{{ $pregunta->descrip_preg }}</li>
-
-                    @endforeach
-
-                </ul>
--->
-
                  <div>
 
                     <a href="{{route('MenuEncuesta')}}" class="btn btn-success">Volver</a>
