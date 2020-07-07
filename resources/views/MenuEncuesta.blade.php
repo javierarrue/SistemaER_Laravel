@@ -149,22 +149,6 @@
            </div>
          </div>
 
-
-
-    <div class="col-md-3">
-          <div class="card shadow">
-                     <div class="inner4">
-                       <image img  src="css_personal/Imagenes_menu/aplicacion_encuesta.png"  class="card-img-top" alt="..."></image>
-                       </div>
-                            <div class="centrado">
-
-                         <h6 class="card-title">Aplicacion de la encuesta</h6>
-                           <a href="{{route('AplicarEncuesta')}}" class="btn btn-primary">Acceder</a>
-              </div>
-           </div>
-         </div>
-
-
          <div class="col-md-3">
                      <div class="card shadow">
                      <div class="inner5">
