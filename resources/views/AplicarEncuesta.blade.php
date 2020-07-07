@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css_personal/AplicarEncuesta.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  
+
 
 </head>
 
@@ -41,13 +41,13 @@
             <ul class="menu_rastros">
 
                 <li class="rastro_item">
-                    <a href="{{route('MenuEncuesta')}}" class="rastro_link">Menú</a>
+                    <a href="{{route('MenuDocentes')}}" class="rastro_link">Menú</a>
                 </li>
 
                 <li class="rastro_item">
                     <a href="{{route('AplicarEncuesta')}}" class="rastro_link">Aplicación de la encuesta</a>
                 </li>
- 
+
 
             </ul>
 
@@ -81,26 +81,26 @@
         <!---------------------------------------------------------------------------------------------------------------->
         <!-- AQUI VA CONTENIDO DE LA PAGINA-->
         <div class="contenido">
-            
+
             <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
 
             <div class="row">
                 <form class="encuesta">
-                
+
                    <center> <h2>Aplicación de la Encuesta</h2></center>
                         <br><br>
-                 
+
                         <a href="{{route('EncuestaDocentes')}}" class="btn btn-success btn-lg btn-block">Aplicar Encuesta</a>
                         <a href="" class="btn btn-success btn-lg btn-block">Aplicar Encuesta</a>
-                    
+
 
                 </form>
-                       
-            </div>
-            <div> 
 
-                <a href="{{route('MenuEncuesta')}}" class="btn btn-success">Volver</a>
-            </div>  
+            </div>
+            <div>
+
+                <a href="{{route('MenuDocentes')}}" class="btn btn-success">Volver</a>
+            </div>
 
         </div>
     </div>

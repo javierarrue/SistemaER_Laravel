@@ -39,4 +39,4 @@ Route::get('ConsultarPreguntas','C_ConsultarPreguntas@Index')->name('ConsultarPr
 Route::get('AplicarEncuesta','C_AplicarEncuesta@Index')->name('AplicarEncuesta');
 Route::get('EncuestaDocentes','C_EncuestaDocentes@Index')->name('EncuestaDocentes');
 
-
+Route::get('MenuDocentes','C_MenuDocente@Index')->name('MenuDocentes');

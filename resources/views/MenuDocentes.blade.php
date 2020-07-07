@@ -74,6 +74,32 @@
 
         <!---------------------------------------------------------------------------------------------------------------->
         <!-- AQUI VA CONTENIDO DE LA PAGINA-->
+        <div class="contenido">
+
+            <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
+
+
+            <h1 class="tit1">Encuesta de Docentes</h1>
+
+             <div class="row">
+                <div class="col-md-3">
+                    <div class="card shadow">
+                                <div class="inner4">
+                                <image img  src="css_personal/Imagenes_menu/aplicacion_encuesta.png"  class="card-img-top" alt="..."></image>
+                                </div>
+                                        <div class="centrado">
+
+                                    <h6 class="card-title">Aplicacion de la encuesta</h6>
+                                    <a href="{{route('AplicarEncuesta')}}" class="btn btn-primary">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <!---------------------------------------------------------------------------------------------------------------->
+        <div>
+
+
 
 </body>
 </html>
