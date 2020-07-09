@@ -116,7 +116,7 @@
                             <div class="centrado">
                               
                          
-                           <a href="#" class="btn btn-primary">Lista de Profesores</a>
+                           <a href="{{route('MostrarProfesores')}}" class="btn btn-primary">Lista de Profesores</a>
                                </div>
                         </div>
             </p>
