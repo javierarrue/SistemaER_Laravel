@@ -85,7 +85,7 @@
 
     <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
 
-<form action="conexion.php" method="POST" class="form-register">
+<form action="ingresar_profesores" method="POST" class="form-register">
 @csrf
 <h2 class="tit1">Registrar Profesor</h2>
 <div class="contenedor-inputs">
