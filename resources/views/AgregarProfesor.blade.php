@@ -112,11 +112,11 @@ Correo:<input type="text" required="required" name="Correo" placeholder="Ingrese
         <option value="1">Campus Metropolitano “Dr. Víctor Levi Sasso”</option>
         <option value="2">Centro Regional de Azuero</option>
         <option value="3">Centro Regional de Bocas del Toro</option>
-        <option value="5">Centro Regional de Coclé</option>
-        <option value="6">Centro Regional de Colón</option>
-        <option value="4">Centro Regional de Chiriquí</option>
-        <option value="8">Centro Regional de Panamá Oeste</option>
-        <option value="7">Centro Regional de Veraguas</option>
+        <option value="4">Centro Regional de Coclé</option>
+        <option value="5">Centro Regional de Colón</option>
+        <option value="6">Centro Regional de Chiriquí</option>
+        <option value="7">Centro Regional de Panamá Oeste</option>
+        <option value="8">Centro Regional de Veraguas</option>
     </select>
   </div>
 
