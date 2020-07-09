@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\http\Requests\R_AgregarProfesor;
+use App\Http\Requests\R_AgregarProfesor;
 use App\Model\ingresar_profesores;
 use App\Traits\Mostrartraits;
 
