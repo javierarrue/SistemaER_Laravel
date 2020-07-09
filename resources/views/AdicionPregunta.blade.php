@@ -112,11 +112,18 @@
                         <div id="agregarPregunta">
                         <!-- SIEMPRE ENVIARA ESTOS VALORES-->
                             <input type="hidden" name="id_encuesta" value="1">
-                            <input type="hidden" name="id_seccion" value="1">
 
                             <!--Este campo siempre se muestra-->
-                            Pregunta a agregar:
+                            <b>Seccion:</b>
+                            <select name="id_seccion" id="id_seccion" onchange="preguntaTipo();"  class="custom-select" required>
+                                <option disabled selected>Ninguno seleccionado</option>
+                                <option value="1">Seccion A: Generales profesor</option>
+                                <option value="2">Seccion B: Calificar grupo</option>
+                            </select> <br><br>
+
+                            <b>Pregunta a agregar:</b>
                             <input type="text" required name="descrip_preg" placeholder="Ingrese la pregunta" class="input-102" required>
+
 
                             <!--Si es una pregunta CERRADA, se muestra este DIV-->
                             <div id="preguntaCerrada">
