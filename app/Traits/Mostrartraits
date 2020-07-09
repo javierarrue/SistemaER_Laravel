@@ -1,0 +1,33 @@
+<?php
+namespace App\Traits;
+use Illuminate\Http\Request;
+/**
+ *
+ */
+
+ trait Mostrartraits {
+
+
+    public function cedul($atrapar){
+
+        $ce=\DB::table('usuario')->select('cedula')->where('cedula',$atrapar)->value($atrapar);
+        if($atrapar==$ce){
+
+            return 1;
+        } else {
+            return 0;
+        }
+
+
+
+    }
+    public function idactualizar($atrapar, $obtener){
+        if($obtener){
+            $idusuario=0;
+            $idusuario=\DB::table('usuario')->select('id_usuario')->where('cedula',$atrapar)->value('id_usuario');
+
+            \DB::table('profesor')->where('cedula',$atrapar)->update(['id_usuario'=>$idusuario]);
+        }
+    }
+
+ }
