@@ -61,6 +61,7 @@
                         if( $pregunta->descrip_opcion <>''):
                             $indice2 = 0;
                         ?>
+                        <!-- Tipo de respuesta-->
                         <input type="hidden" name="<?php echo $indice;?>[tipo_resp]" value="cerrado">
 
                             @foreach ($preguntas as $pregunta)
@@ -79,9 +80,12 @@
                                     $indice2++;
                                 endif ?>
                             @endforeach
+                            <!--Cant de opciones-->
+                            <input type="hidden" name="<?php echo $indice;?>[cant_opciones]" value="<?php echo $indice2;?>">
 
                             <!-- Si esta vacio muestro un input.-->
                             <?php else: ?>
+                            <!-- Tipo de respuesta-->
                                 <input type="hidden" name="<?php echo $indice;?>[tipo_resp]" value="abierta">
                                 <!--ID DE SECCION -->
                                 <input type="hidden" name="<?php echo $indice;?>[id_opcion0]" value="140">

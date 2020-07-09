@@ -75,6 +75,12 @@
         <!---------------------------------------------------------------------------------------------------------------->
         <!-- AQUI VA CONTENIDO DE LA PAGINA-->
         <div class="contenido">
+        @if(session('status'))
+                <div class="alert alert-success">
+                    {{session('status')}}
+                </div>
+                <hr class="my-3">
+        @endif
 
             <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
 
