@@ -1,4 +1,3 @@
-@extends('layouts.app')
 
 <!DOCTYPE HTML>
 <html>
@@ -96,7 +95,7 @@
                     </div>
                 @endif
 
-                <h2 class="tit1">Adición de pregunta</h2>
+                <h2>Adición de pregunta</h2>
 
                     <div class="contenedor-inputs">
 
@@ -130,7 +129,7 @@
                                 <h5>Respuestas</h5>
                               <!--BOTON QUE SE ENCARGA DE AÑADIR RESPUESTA
                                 mediante el onclick-->
-                                <button type="button" class="btn btn-success" id="añadirRespuesta" onclick="agregarRespuesta()">
+                                <button type="button" class="btn btn-success mb-1" id="añadirRespuesta" onclick="agregarRespuesta()">
                                     Añadir respuesta
                                 </button>
 
