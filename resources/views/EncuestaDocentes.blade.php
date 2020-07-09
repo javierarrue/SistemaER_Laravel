@@ -94,7 +94,7 @@
                 <hr class="my-3">
             @endif
 
-                <form class="encuesta" method="post" action="EncuestaDocentes">
+                <form class="encuesta" method="post" action="EncuestaDocenteFormulario">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -164,8 +164,8 @@
                             <label for="inputState">Semestre:</label>
                             <select id="inputState" class="form-control" name="semestres" required>
                                 <option disabled selected>Ninguno seleccionado</option>
-                                <option value="I" name="">I Semestre</option>
-                                <option value="II" name="">II Semestre</option>
+                                <option value="I Semestre" name="">I Semestre</option>
+                                <option value="II Semestre" name="">II Semestre</option>
                             </select>
                           </div>
 

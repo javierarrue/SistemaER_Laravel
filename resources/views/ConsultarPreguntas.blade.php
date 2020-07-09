@@ -142,7 +142,7 @@
                                                 </div>
                                                 <?php endif ?>
                                         @endforeach
-                                        <!-- Si esta vacio muetro un input.-->
+                                        <!-- Si esta vacio muestro un input.-->
                                         <?php else: ?>
                                             <input type="text" class="form-control">
                                         <?php endif ?>

@@ -35,40 +35,4 @@ class C_EncuestaDocentes extends Controller
         // ->with(compact('data'));
     }
 
-
-    public function store(EncuestaDocenteRequest $request){
-        $respuestas = Respuestas::all();
-        $idUsuario = Usuarios::all();
-
-        $idUsuario = DB::table('usuario')
-        ->select('id_usuario')
-        ->where('cedula','=',$request->cedula)
-        ->get();
-
-        if($idUsuario->first()!==null){
-
-            $id_usuario = "";
-            foreach ($idUsuario as $id){
-                $id_usuario = $id->id_usuario;
-            }
-
-            $respuestas = DB::table('respuesta')
-            ->select('id_usuario','id_asignatura','id_grupo')
-            ->where('id_usuario','=',$id_usuario)
-            ->where('id_asignatura','=',$request->asignaturas)
-            ->where('id_grupo','=',$request->grupos)
-            ->first();
-
-
-
-            if($respuestas==null){
-                return view("MenuDocentes");
-            }
-            return redirect()->back()->withErrors("Ya contesto la encuesta para ese Grupo y Asignatura");
-
-
-        }
-        return redirect()->back()->withErrors("No se encontro la cedula");
-
-    }
 }

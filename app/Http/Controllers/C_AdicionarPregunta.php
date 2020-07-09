@@ -11,7 +11,7 @@ class C_AdicionarPregunta extends Controller
 {
     public function Index(){
         return view('AdicionPregunta');
-    }
+}
 
     public function Store(AddPreguntaRequest $request){
         //objeto del Modelo Pregunta

@@ -26,6 +26,7 @@ Route::post('AdicionarPregunta','C_Adicionarpregunta@Store');
 
 Route::get('MenuEncuesta','C_MenuEncuesta@Index')->name('MenuEncuesta');
 Route::get('MenuDocentes','C_MenuDocente@Index')->name('MenuDocentes');
+Route::post('MenuDocentes','C_MenuDocente@Store');
 
 Route::get('ListaProfesores','C_ListaProfesores@Index')->name('ListaProfesores');
 Route::get('AgregarProfesor','C_AgregarProfesor@Index')->name('AgregarProfesor');
@@ -39,7 +40,8 @@ Route::get('ConsultarPreguntas','C_ConsultarPreguntas@Index')->name('ConsultarPr
 
 Route::get('AplicarEncuesta','C_AplicarEncuesta@Index')->name('AplicarEncuesta');
 Route::get('EncuestaDocentes','C_EncuestaDocentes@Index')->name('EncuestaDocentes');
-Route::post('EncuestaDocentes','C_EncuestaDocentes@store');
 
+Route::post('EncuestaDocenteFormulario','C_EncuestaDocenteFormulario@Index');
+Route::get('EncuestaDocenteFormulario','C_EncuestaDocenteFormulario@Index')->name('EncuestaDocenteFormulario');
 
 
