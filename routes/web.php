@@ -28,8 +28,12 @@ Route::get('MenuEncuesta','C_MenuEncuesta@Index')->name('MenuEncuesta');
 Route::get('MenuDocentes','C_MenuDocente@Index')->name('MenuDocentes');
 Route::post('MenuDocentes','C_MenuDocente@Store');
 
-Route::get('ListaProfesores','C_ListaProfesores@Index')->name('ListaProfesores');
-Route::get('AgregarProfesor','C_AgregarProfesor@Index')->name('AgregarProfesor');
+
+Route::get('AgregarProfesor', 'C_AgregarProfesor@AgregarProfesor')->name('AgregarProfesor');
+Route::post('ingresar_profesores', 'C_AgregarProfesor@Store');
+Route::get('MostrarProfesores', 'C_MostrarProfesores@MostrarProfesores')->name('MostrarProfesores');
+Route::get('AgregarProfesor2', 'C_AgregarProfesor2@AgregarProfesor2')->name('AgregarProfesor2');
+
 
 Route::get('EliminarPregunta','C_EliminarPregunta@Index')->name('EliminarPregunta');
 Route::get('ActualizarPregunta','C_ActualizarPregunta@Index')->name('ActualizarPregunta');
