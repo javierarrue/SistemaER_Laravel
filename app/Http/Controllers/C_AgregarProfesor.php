@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\http\Requests\R_AgregarProfesor;
+use App\Model\ingresar_profesores;
+use App\Traits\Mostrartraits;
 
 class C_AgregarProfesor extends Controller
 {
+    use Mostrartraits;
     public function Index(){
         return view('AgregarProfesor');
     }
