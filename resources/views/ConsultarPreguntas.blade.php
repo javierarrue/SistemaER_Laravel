@@ -143,7 +143,7 @@
                                         @endforeach
                                         <!-- Si esta vacio muestro un input.-->
                                         <?php else: ?>
-                                            <input type="text" class="form-control">
+                                            <span style="color:grey;">Esta pregunta es abierta, no tiene opciones establecidas</span>
                                         <?php endif ?>
                                         </ul>
 
