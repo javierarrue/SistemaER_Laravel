@@ -10,7 +10,7 @@ use App\Traits\Mostrartraits;
 class C_AgregarProfesor extends Controller
 {
     use Mostrartraits;
-    public function Index(){
+    public function AgregarProfesor(){
         return view('AgregarProfesor');
     }
     
