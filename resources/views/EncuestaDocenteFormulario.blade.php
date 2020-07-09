@@ -14,6 +14,7 @@
     <div class="container">
 
         <h2 class="text-center">Encuesta a Docentes</h2>
+
         <div class="m-3"><h5># &nbsp&nbsp&nbsp&nbsp Pregunta</h5></div>
         <hr>
         @if(session('status'))
@@ -113,8 +114,11 @@
             <?php $indice--;?>
             <!--SEMESTRE-->
             <input type="hidden" name="cantidad" value="<?php echo  $indice ?>">
+            <a href="{{route('EncuestaDocentes')}}" class="btn btn-success w-25 p-1 mb-5">Volver</a>
             <input type="submit" value="Enviar" class="btn btn-success w-25 p-1 mb-5 ">
         </form>
+
+
 
     </div>
 

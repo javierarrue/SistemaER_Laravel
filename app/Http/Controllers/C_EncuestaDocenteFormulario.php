@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Model\Preguntas;
 use App\Http\Requests\EncuestaDocenteRequest;
+use App\Model\Carreras;
 use App\Model\Usuarios;
 use App\Model\Respuestas;
+use Carbon\Carbon;
 
 class C_EncuestaDocenteFormulario extends Controller
 {
@@ -46,19 +48,27 @@ class C_EncuestaDocenteFormulario extends Controller
             /*Luego procedo a consultar la tabla RESPUESTA
                 En esta consulta intento ver si el docente
                 ya habia contestado a la encuesta
-                en base a LA ASIGNATURA y EL GRUPO seleccionados.
+                en base a LA ASIGNATURA, EL GRUPO y el año.
             */
+
+            $result = DB::select('SELECT*FROM respuesta
+            WHERE EXTRACT(YEAR FROM año)=?
+            AND id_usuario=?
+            AND id_asignatura=?
+            AND id_grupo=?',
+            [date('Y'),$id_usuario,$request->asignaturas,$request->grupos]);
+
+/*
             $respuestas = DB::table('respuesta')
-            ->select('id_usuario','id_asignatura','id_grupo')
+            ->select('id_usuario','id_asignatura','id_grupo','año')
             ->where('id_usuario','=',$id_usuario)
             ->where('id_asignatura','=',$request->asignaturas)
             ->where('id_grupo','=',$request->grupos)
             ->first();
-
-
+*/
             /*AHORA, si contesto alguna pregunta SIGNIFICA QUE:
                 Ya hizo la encuesta anteriormente*/
-            if($respuestas==null){
+            if(empty($result)){
                 /*Si la consulta es NULL, osea si no devuelve NADA
                 Significa que NO hizo la encuesta para el GRUPO Y ASIGNATURA seleccionados*/
                 $preguntas = Preguntas::all();
@@ -76,6 +86,7 @@ class C_EncuestaDocenteFormulario extends Controller
 
                 /*RETORNO LA VISTA, juntado con el Json con todas las preguntas de id_encuesta = 1
                 Osea las encuesta a DOCENTES*/
+                //
                 return view("EncuestaDocenteFormulario",
                 compact('preguntas'))
                 ->with(compact('id_asignatura'))
