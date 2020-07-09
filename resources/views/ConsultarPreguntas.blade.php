@@ -134,11 +134,10 @@
                                                 if($idPregunta == $pregunta->id_pregunta AND $pregunta->descrip_opcion <>''):
                                             ?>
                                                 </label>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                    <label class="form-check-label" for="defaultCheck1">
-                                                    {{$pregunta->descrip_opcion}}
-                                                    </label>
+                                                <div class="list-group">
+                                                <a href="#!" class="list-group-item list-group-item-action">
+                                                        <b>- </b>{{$pregunta->descrip_opcion}}
+                                                </a>
                                                 </div>
                                                 <?php endif ?>
                                         @endforeach
