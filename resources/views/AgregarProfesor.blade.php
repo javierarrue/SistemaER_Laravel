@@ -86,8 +86,19 @@
     <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
 
 <form action="conexion.php" method="POST" class="form-register">
+@csrf
 <h2 class="tit1">Registrar Profesor</h2>
 <div class="contenedor-inputs">
+@if ($errors->any())
+                      <Div class="alert alert-danger">
+                         <Ul>
+                             @foreach ($errors->all() as $error)
+                             <Li>{{$error}}</Li>
+                             @endforeach
+                         </Ul>
+                      
+                      </Div>
+@endif
 Nombre:<input type="text" required="required" name="nombre" placeholder="Ingrese el Nombre" class="input-50" required>
 Apellido:<input type="text" required="required" name="apellido" placeholder="Ingrese el apellido" class="input-50" required>
 Cédula:<input type="text" required="required" name="cedula" placeholder="Ingrese la Cédula"  class="input-100" required>
