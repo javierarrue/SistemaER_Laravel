@@ -64,7 +64,7 @@
                         ?>
                         <!-- Tipo de respuesta-->
                         <input type="hidden" name="<?php echo $indice;?>[tipo_resp]" value="cerrado">
-
+                        <br><span>Seleccione al menos una opcion</span>
                             @foreach ($preguntas as $pregunta)
                                 <!--OPCIONES DE PREGUNTAS-->
                                 <?php
