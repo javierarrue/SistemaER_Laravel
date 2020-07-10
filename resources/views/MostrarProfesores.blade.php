@@ -84,7 +84,7 @@
       
 
 <div class="contenido">
-
+<button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
 <section id="container">
 
 <h1>Lista de Profesores</h1>
