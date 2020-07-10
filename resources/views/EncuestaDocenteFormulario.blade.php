@@ -64,7 +64,7 @@
                         ?>
                         <!-- Tipo de respuesta-->
                         <input type="hidden" name="<?php echo $indice;?>[tipo_resp]" value="cerrado">
-
+                        <br><span>Seleccione al menos una opcion</span>
                             @foreach ($preguntas as $pregunta)
                                 <!--OPCIONES DE PREGUNTAS-->
                                 <?php
@@ -72,6 +72,7 @@
                                 ?>
                                     <div class="form-check">
                                         <!--ID DE OPCION-->
+                                        <!-- CheckBox-->
                                         <input value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion<?php echo $indice2;?>]" class="form-check-input" type="checkbox" id="defaultCheck<?php echo $indice2;?>">
                                         <label class="form-check-label" for="defaultCheck<?php echo $indice2;?>">
                                             {{$pregunta->descrip_opcion}} <?php $idPregunta?>
@@ -91,7 +92,7 @@
                                 <!--ID DE SECCION -->
                                 <input type="hidden" name="<?php echo $indice;?>[id_opcion0]" value="140">
                                 <!--DESCRIP_RESPUESTA-->
-                                <input type="text" class="form-control" name="<?php echo $indice;?>[descrip_resp]">
+                                <input type="text" class="form-control" name="<?php echo $indice;?>[descrip_resp]" required>
                             <?php endif ?>
 
                             <!--ID DE ASIGNATURA-->
