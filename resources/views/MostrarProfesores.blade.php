@@ -33,41 +33,30 @@
     
         <!-- Menu de rastros-->
 
-            <div class="contenedor_menu_rastros">
+         <div class="contenedor_menu_rastros">
     
-                <ul class="menu_rastros">
-        
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link">Principal</a>
-                    </li>
-            
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link">Pagina 1</a>
-                    </li>
-            
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link rastro_link_activo">Pagina 1.1</a>
-                    </li>
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link rastro_link_activo">Pagina 1.1</a>
-                    </li>
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link rastro_link_activo">Pagina 1.1</a>
-                    </li>
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link rastro_link_activo">Pagina 1.1</a>
-                    </li>
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link rastro_link_activo">Pagina 1.1</a>
-                    </li>
-            
-                </ul>
+    <ul class="menu_rastros">
+
+        <li class="rastro_item">
+            <a href="{{route('MenuEncuesta')}}" class="rastro_link">Menú</a>
+        </li>
+
+        <li class="rastro_item">
+            <a href="{{route('ListaProfesores')}}" class="rastro_link">Lista de profesores</a>
+        </li>
+
+        <li class="rastro_item">
+            <a href="" class="rastro_link rastro_link_activo">Lista de Los Profesores Registrados</a>
+        </li>
+
+    </ul>
+
+    <div class="nombre_usuario">
+        <span>Nombre de usuario</span>
+    </div>
+</div>
+
     
-                <div class="nombre_usuario">
-                    <span>Nombre de usuario</span>
-                </div>
-            </div>
-   
 
     
     
