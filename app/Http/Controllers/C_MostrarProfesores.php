@@ -18,9 +18,9 @@ class C_MostrarProfesores extends Controller
     public function MostrarProfesores(){
         $profesor= \DB::table('profesor')
         ->join('sede','sede.id_sede', '=', 'profesor.id_sede')
-        ->select('profesor.nombre', 'profesor.apellido', 'profesor.cedula', 'profesor.correo', 'profesor.telefono', 'sede.nombre as sedenombre')
+        ->select('profesor.nombre', 'profesor.apellido', 'profesor.cedula', 'profesor.correo', 'profesor.telefono', 'sede.nombre_sede as sedenombre')
         ->paginate(5);
         return view('mostrarprofesores')->with('profesor',$profesor);
     }
-    
+
 }
