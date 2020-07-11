@@ -32,6 +32,8 @@ Route::get('ListaProfesores','C_ListaProfesores@Index')->name('ListaProfesores')
 Route::get('AgregarProfesor','C_AgregarProfesor@Index')->name('AgregarProfesor');
 
 Route::get('EliminarPregunta','C_EliminarPregunta@Index')->name('EliminarPregunta');
+Route::post('EliminarPregunta','C_EliminarPregunta@Delete');
+
 Route::get('ActualizarPregunta','C_ActualizarPregunta@Index')->name('ActualizarPregunta');
 Route::get('ActualizarPreguntaEditar','C_ActualizarPreguntaEditar@Index')->name('ActualizarPreguntaEditar');
 
