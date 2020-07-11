@@ -36,6 +36,8 @@ Route::get('AgregarProfesor2', 'C_AgregarProfesor2@AgregarProfesor2')->name('Agr
 
 
 Route::get('EliminarPregunta','C_EliminarPregunta@Index')->name('EliminarPregunta');
+Route::post('EliminarPregunta','C_EliminarPregunta@Delete');
+
 Route::get('ActualizarPregunta','C_ActualizarPregunta@Index')->name('ActualizarPregunta');
 Route::get('ActualizarPreguntaEditar','C_ActualizarPreguntaEditar@Index')->name('ActualizarPreguntaEditar');
 

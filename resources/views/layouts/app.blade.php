@@ -1,90 +1,62 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de encuesta</title>
-    <link rel="stylesheet" href="{{asset('css_personal/MenuEncuesta.css')}}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <title>@yield('title')</title>
+
+    <!-- Scripts -->
+    <!--<script src="{{ asset('js/app.js') }}" defer></script>-->
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel ="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <!-- Styles -->
+    <style>
+    .anav{
+    color: black;
+    font-family: "Pill Gothic 600mg Semibd", sans-serif;
+    }
+
+    </style>
+
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
 </head>
+<!-- UTP HEADER -->
+<header style="background-image: url(../imagenes/headerutp.jpg); background-repeat: no-repeat; background-size: cover; padding: 8.3%; ">
+</header>
+<!--NAV NAME -->
+<nav class="navbar navbar-light" style="background-color:#005B28;">
+  <!-- Navbar content -->
+  <a class="navbar-brand" style="color: #fff" href="#"> SECRETARIA DE LA VICEDECANA ACADEMICA </a>
+</nav>
+   <!-- NAV PRINCIPAL -->
+
+<nav class="navbar navbar-expand-sm justify-content-center navbar-light sticky-top" style="font-family: Pill Gothic 600mg Semibd; sans-serif; background-color:  rgba(80, 78, 78, 0.233);">
+  <ul class="navbar-nav">
+    <li class="nav-item" >
+      <a class="navbar-link anav" href="#inicio" ><img src="../icons/home.svg" alt="home SVG" >  INICIO</a>
+    </li>
+    <div Style="width: 50px;"></div>
+    <li class="nav-item" >
+      <a class="navbar-link anav" href="#encuesta" ><img src="../icons/file.svg" alt="file SVG"> ENCUESTAS</a>
+    </li>
+    <div style="width: 50px;"></div>
+    <li class="nav-item" >
+      <a class="navbar-link anav" href="#reportes"><img src="../icons/book-open.svg" alt="book SVG">   GENERAR REPORTES</a>
+    </li>
+  </ul>
+</nav>
+
 <body>
-
-
-    <div class="contenedor">
-
-        <header>
-
-            <!-- Aqui van las imagenes de arriba-->
-            <div class="imagenesHorizontales">
-
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoUtp.png" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img1.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img2.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img3.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img4.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img5.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoFisc.png" alt=""></div>
-
-            </div>
-
-        </header>
-
-        <!-- Menu de rastros-->
-
-            <div class="contenedor_menu_rastros">
-
-                <ul class="menu_rastros">
-
-                    <li class="rastro_item">
-                        <a href="{{route('MenuEncuesta')}}" class="rastro_link">Menú</a>
-                    </li>
-
-                </ul>
-
-                <div class="nombre_usuario">
-                    <span>Nombre de usuario</span>
-                </div>
-            </div>
-
-
-
-
-        <!-- Lado izq. de la pagina, tiene una imagen vertical -->
-        <aside>
-
-            <div class="contenedor_imagen_vertical">
-
-                <img src="https://www.utp.ac.pa/sites/default/files/fisc-aniversario-2017.jpg" alt="" class="img_vertical">
-                <br>
-
-                <span class="txt_imagenVertical">Este sitio es mantenido por la Universidad Tecnológica de Panamá</span>
-                <br>
-                <a href="">Política de privacidad</a>
-
-            </div>
-
-        </aside>
-
-
-
-        <!---------------------------------------------------------------------------------------------------------------->
-        <!-- AQUI VA CONTENIDO DE LA PAGINA-->
-
-    <div class="contenido">
+<div class="contenido">
     @yield('content')
     </div>
-
-
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
 </body>
 </html>
-
-
-
