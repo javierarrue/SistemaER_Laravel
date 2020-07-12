@@ -23,7 +23,7 @@
 
 </div>
 
-<a href="{{route('MenuEncuesta')}}" class="btn btn-primary ml-4">Volver</a>
+<a href="{{route('MenuEncuesta')}}" class="btn btn-primary btn-lg ml-4">Volver</a>
 
 
 

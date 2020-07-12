@@ -4,7 +4,6 @@
 
 
 <div class="contenido">
-<button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
 <section id="container">
 
 <h1>Lista de Profesores</h1>
@@ -46,17 +45,8 @@
 
 </section>
 
-
-
-
-
-
-
-
-
-
     <div class="botonvolver">
-    <a href="{{ url('ListaProfesores') }}" class="btn btn-primary ml-4">Volver</a>
+    <a href="{{ url('ListaProfesores') }}" class="btn btn-primary btn-lg ml-4">Volver</a>
     </div>
 
     <div class="botonregistar">

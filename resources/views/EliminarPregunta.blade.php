@@ -33,9 +33,8 @@
             <h1 class="text-center text-success">Eliminar Preguntas</h1>
             <br>
             <br>
-
+            <div class="container">
                 <!-- ACORDEON -->
-                <div class="container">
                 <h6>Click en una pregunta para ver sus respuestas</h6>
                     <div class="row">
                     <!-- Foreach para listar todas las preguntas-->
@@ -107,17 +106,10 @@
                         ?>
                         <?php endif ?>
                     @endforeach
+                    <a href="{{route('MenuEncuesta')}}" class="btn btn-primary btn-lg m-5">Volver</a>
                     </div>
-
-                </div>
                 <!-- FIN ACORDEON -->
             </div>
-                 <div>
 
-        <div class="d-flex justify-content-between">
-            <a href="{{route('MenuEncuesta')}}" class="btn btn-primary m-4">Volver</a>
-
-        </div>
-        </div>
         <!---------------------------------------------------------------------------------------------------------------->
 @endsection

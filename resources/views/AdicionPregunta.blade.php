@@ -9,7 +9,7 @@
                 <hr class="my-3">
             @endif
 
-            <form action="AdicionarPregunta" method="POST" class="form-register mt-5">
+            <form action="AdicionarPregunta" method="POST" class="form-register">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -77,7 +77,7 @@
 
             <div class="botonvolver">
 
-              <a href="{{route('MenuEncuesta')}}" class="btn btn-success ml-4">Volver</a>
+              <a href="{{route('MenuEncuesta')}}" class="btn btn-success btn-lg ml-4">Volver</a>
 
             </div>
 

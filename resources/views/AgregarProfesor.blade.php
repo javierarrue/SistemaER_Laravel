@@ -51,7 +51,7 @@ Correo:<input type="text" required="required" name="correo" placeholder="Ingrese
 </form>
 
 
-    <a href="{{route('ListaProfesores')}}" class="btn btn-primary m-4">Volver</a>
+    <a href="{{route('ListaProfesores')}}" class="btn btn-primary btn-lg m-4">Volver</a>
 
 
   </div>
