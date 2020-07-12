@@ -17,13 +17,14 @@ class C_MenuDocente extends Controller
         //El problema se haya con las respuesta de seleccion multiple, ya que estas se almacenan en un
         //mismo "arreglo", pero en la base de datos cada opcion representa una respuesta distinta.
 
-//$request->cantidad+1
         /*Recibo mediante el REQUEST la cantidad de preguntas que se generaron en el formulario
         esto me indicara cuantas veces debo iterar*/
+
         for($i = 1 ; $i<$request->cantidad+1;$i++){
             /*"Objeto" not sure como llamarlo de tipo Respuestas
             Esto se hace para manejar mejor que insertar y que no.
             */
+
             $respuestas = new Respuestas();
             /*Ahora con el indice del bucle for, voy iterando en cada "arreglo" de la coleccion
             Los nombres de los "arreglos" esan definidos simplemente por numeros
@@ -32,6 +33,7 @@ class C_MenuDocente extends Controller
             3:[respuesta]
             */
             $data = $request->$i;
+
 
             if($data["tipo_resp"]=="abierta"){
 
@@ -44,7 +46,7 @@ class C_MenuDocente extends Controller
                 $respuestas->id_asignatura = $data["id_asignatura"];
                 $respuestas->id_grupo = $data["id_grupo"];
                 $respuestas->semestre = $data["semestre"];
-                $respuestas->save();
+             $respuestas->save();
 
             }else{
                 /*Al ser respuesta de una pregunta cerrada
@@ -60,22 +62,54 @@ class C_MenuDocente extends Controller
                 etc..
                 */
                 for($j = 0; $j<$data["cant_opciones"];$j++){
+
+                    if(array_key_exists("id_opcion".$j, $data)){
                     $respuestas = new Respuestas();
 
                     $respuestas->id_usuario = $data["id_usuario"];
                     $respuestas->id_encuesta = $data["id_encuesta"];
                     $respuestas->id_seccion = $data["id_seccion"];
                     $respuestas->id_pregunta = $data["id_pregunta"];
-                    $respuestas->descrip_respuesta = NULL;
                     $respuestas->id_asignatura = $data["id_asignatura"];
                     $respuestas->id_grupo = $data["id_grupo"];
                     $respuestas->semestre = $data["semestre"];
                     /*Si en el arreglo se encuentra el campo, entonces procede a insertar en la BD
                     Si el id_opcion[indice], fue seleccionado, entonces este va a estar en el arreglo.
                     */
-                    if(array_key_exists("id_opcion".$j, $data)){
-                        $respuestas->id_opcion = $data["id_opcion".$j];
-                       $respuestas->save();
+
+                        if(array_key_exists("respuesta", $data)){
+
+                            $respuesta = $data["respuesta"];
+
+                            if($respuesta == null){
+
+                                    if($data["id_opcion_escribir"] !== $data["id_opcion".$j]){
+                                        $respuestas->descrip_respuesta = null;
+                                        $respuestas->id_opcion = $data["id_opcion".$j];
+                                        $respuestas->save();
+                                    }
+
+                            }
+                            else{
+                                if($data["id_opcion_escribir"] == $data["id_opcion".$j]){
+
+                                    $respuestas->id_opcion = $data["id_opcion_escribir"];
+                                    $respuestas->descrip_respuesta = $data["respuesta"];
+
+                                }else{
+                                    $respuestas->id_opcion = $data["id_opcion".$j];
+                                }
+                                $respuestas->save();
+                            }
+                        }
+                        else{
+                            $respuestas->id_opcion = $data["id_opcion".$j];
+                            $respuestas->save();
+                        }
+
+
+
+
                     }
                 }
 
@@ -83,6 +117,9 @@ class C_MenuDocente extends Controller
 
         }
 
-        return redirect('MenuDocentes')->with('status','¡ Encuesta Enviada !');;
+
+        return redirect('MenuDocentes')->with('status','¡ Encuesta Enviada !');
     }
+
+
 }

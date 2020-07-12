@@ -23,9 +23,34 @@
 <img src="{{asset ('imagenes/fisc.png')}}" class="imglge1">
 <img src="{{asset ('imagenes/utplogo.png')}}" class="imglge">
 
+
+
 <form action="EncuestaDocentes">
+
 <button href="{{route('EncuestaDocentes')}}" id="startBtn" class="butonenc"><h3>RESOLVER ENCUESTA DE DOCENTES</h3></button>
+
+
 </form>
+
+    @if(session('status'))
+    <div class="alert alert-success" id="alerta">
+        {{session('status')}}
+    </div>
+    @endif
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
+
+
+
 
 
 </body>

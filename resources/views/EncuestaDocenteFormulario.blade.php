@@ -71,12 +71,23 @@
                                 if($idPregunta == $pregunta->id_pregunta AND $pregunta->descrip_opcion <>''):
                                 ?>
                                     <div class="form-check">
-                                        <!--ID DE OPCION-->
-                                        <!-- CheckBox-->
+
+                                        @if($pregunta->descrip_opcion == "Otros escriba")
+
+                                        {{$pregunta->descrip_opcion}} <?php $idPregunta?>
+                                        <input type="text" class="form-control" name="<?php echo $indice;?>[respuesta]" value=" ">
+                                        <input type="hidden" name="<?php echo $indice;?>[id_opcion_escribir]" value="{{$pregunta->id_opcion}}">
+                                        <input type="hidden" value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion<?php echo $indice2;?>]">
+
+                                        @else
                                         <input value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion<?php echo $indice2;?>]" class="form-check-input" type="checkbox" id="defaultCheck<?php echo $indice2;?>">
+
                                         <label class="form-check-label" for="defaultCheck<?php echo $indice2;?>">
                                             {{$pregunta->descrip_opcion}} <?php $idPregunta?>
                                         </label>
+
+                                        @endif
+
                                     </div>
                                 <?php
                                     $indice2++;
