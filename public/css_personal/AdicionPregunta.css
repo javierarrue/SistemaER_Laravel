@@ -16,8 +16,6 @@ body{
 
 .contenedor{
 
-overflow-y: hidden;
-
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(4,1fr); /*Usando grid para estructurar la pagina*/

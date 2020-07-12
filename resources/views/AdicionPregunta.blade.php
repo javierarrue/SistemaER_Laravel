@@ -1,81 +1,7 @@
+@extends('layouts.PlantillaAdminEncuestaDocentes')
 
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de encuesta</title>
-    <link rel="stylesheet" href="{{asset('css_personal/AdicionPregunta.css')}}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+@section('content')
 
-</head>
-
-  <body>
-
-
-        <div class="contenedor">
-
-            <header>
-
-                <!-- Aqui van las imagenes de arriba-->
-                <div class="imagenesHorizontales">
-
-                    <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoUtp.png" alt=""></div>
-                    <div class="contenedorImagen"> <img src="css_personal/Imagenes/img1.jpg" alt=""></div>
-                    <div class="contenedorImagen"> <img src="css_personal/Imagenes/img2.jpg" alt=""></div>
-                    <div class="contenedorImagen"> <img src="css_personal/Imagenes/img3.jpg" alt=""></div>
-                    <div class="contenedorImagen"> <img src="css_personal/Imagenes/img4.jpg" alt=""></div>
-                    <div class="contenedorImagen"> <img src="css_personal/Imagenes/img5.jpg" alt=""></div>
-                    <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoFisc.png" alt=""></div>
-
-                </div>
-
-            </header>
-
-            <!-- Menu de rastros-->
-
-        <div class="contenedor_menu_rastros">
-
-          <ul class="menu_rastros">
-
-              <li class="rastro_item">
-                  <a href="{{route('MenuEncuesta')}}" class="rastro_link">Menú</a>
-              </li>
-
-              <li class="rastro_item">
-                  <a href="" class="rastro_link">Adicion de preguntas</a>
-              </li>
-
-
-          </ul>
-
-          <div class="nombre_usuario">
-              <span>Nombre de usuario</span>
-          </div>
-
-        </div>
-
-        <!-- Lado izq. de la pagina, tiene una imagen vertical -->
-        <aside>
-
-            <div class="contenedor_imagen_vertical">
-
-                <img src="https://www.utp.ac.pa/sites/default/files/fisc-aniversario-2017.jpg" alt="" class="img_vertical">
-                <br>
-
-                <span class="txt_imagenVertical">Este sitio es mantenido por la Universidad Tecnológica de Panamá</span>
-                <br>
-                <a href="">Política de privacidad</a>
-
-            </div>
-
-        </aside>
-
-        <!--Contenido de la Página-->
-        <div class="contenido">
-
-            <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
             @if(session('status'))
                 <div class="alert alert-success">
                     {{session('status')}}
@@ -83,7 +9,7 @@
                 <hr class="my-3">
             @endif
 
-            <form action="AdicionarPregunta" method="POST" class="form-register">
+            <form action="AdicionarPregunta" method="POST" class="form-register mt-5">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -129,7 +55,7 @@
                                 <h5>Respuestas</h5>
                               <!--BOTON QUE SE ENCARGA DE AÑADIR RESPUESTA
                                 mediante el onclick-->
-                                <button type="button" class="btn btn-success mb-1" id="añadirRespuesta" onclick="agregarRespuesta()">
+                                <button type="button" class="btn btn-primary mb-1" id="añadirRespuesta" onclick="agregarRespuesta()">
                                     Añadir respuesta
                                 </button>
 
@@ -139,7 +65,7 @@
                             </div>
 
                             <!--Este boton siempre se ve-->
-                            <input type="submit" value="Guardar" class="btn btn-success">
+                            <input type="submit" value="Guardar" class="btn btn-primary">
 
                         </div>
 
@@ -151,13 +77,10 @@
 
             <div class="botonvolver">
 
-              <a href="{{route('MenuEncuesta')}}" class="btn btn-success">Volver</a>
+              <a href="{{route('MenuEncuesta')}}" class="btn btn-success ml-4">Volver</a>
 
             </div>
 
-        </div>
-
     <script src="{{ asset('js/adicionarPregunta.js') }}"></script>
 
-  </body>
-</html>
+@endsection

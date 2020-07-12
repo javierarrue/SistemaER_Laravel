@@ -6,7 +6,6 @@
 body{
     background-color: #E9ECF4;
     font-family: 'Roboto', sans-serif;
-overflow:hidden;
 }
 
 
@@ -34,7 +33,7 @@ header{
 
     grid-area: header;
 
-} 
+}
 
 /*--------IMAGENES------------*/
 .imagenesHorizontales{
@@ -44,7 +43,7 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    
+
 }
 
 header img{
@@ -148,7 +147,7 @@ footer{
 
     grid-area: footer;
     background-color: rgb(226, 223, 223);;
-    
+
 }
 
 /*------------------------------ RESPONSIVE ---------------------------*/
@@ -166,7 +165,7 @@ disminuir el tamaño del dispositivo*/
     .nombre_usuario{
         display: block;
         position: relative;
-    
+
         margin-top: 5px;
     }
 }
@@ -187,14 +186,14 @@ disminuir el tamaño del dispositivo*/
                             "menu_rastros menu_rastros menu_rastros menu_rastros"
                             "contenido contenido contenido contenido";
 
-                        
+
     }
 
     .contenedor_menu_rastros a
     {
         font-size: 13px;
     }
- 
+
 
     .contenedor_imagen_vertical{
         display: none;
@@ -286,17 +285,17 @@ table td{
 
     h1{
         text-align: center;
-   
+
     color: green;
     }
-   
+
 
     .btn-success{
         position: absolute;
     top: 94%;
     left:87%;
     }
- 
+
 /*aqui empieza el paginador*/
 .paginador ul{
 padding: 15px;

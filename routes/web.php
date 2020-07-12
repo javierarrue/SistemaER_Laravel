@@ -44,7 +44,6 @@ Route::get('ActualizarPreguntaEditar','C_ActualizarPreguntaEditar@Index')->name(
 
 Route::get('ConsultarPreguntas','C_ConsultarPreguntas@Index')->name('ConsultarPreguntas');
 
-Route::get('AplicarEncuesta','C_AplicarEncuesta@Index')->name('AplicarEncuesta');
 Route::get('EncuestaDocentes','C_EncuestaDocentes@Index')->name('EncuestaDocentes');
 
 Route::post('EncuestaDocenteFormulario','C_EncuestaDocenteFormulario@Index');

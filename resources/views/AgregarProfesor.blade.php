@@ -1,93 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Profesores</title>
-    <link rel="stylesheet" href="{{asset('css_personal/AgregarProfesor.css')}}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-</head>
-<body>
 
 
-    <div class="contenedor">
+@extends('layouts.PlantillaAdminEncuestaDocentes')
 
-        <header>
+@section('content')
 
-            <!-- Aqui van las imagenes de arriba-->
-            <div class="imagenesHorizontales">
-
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoUtp.png" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img1.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img2.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img3.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img4.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/img5.jpg" alt=""></div>
-                <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoFisc.png" alt=""></div>
-
-            </div>
-
-        </header>
-
-        <!-- Menu de rastros-->
-
-            <div class="contenedor_menu_rastros">
-
-                <ul class="menu_rastros">
-
-                    <li class="rastro_item">
-                        <a href="{{route('MenuEncuesta')}}" class="rastro_link">Menú</a>
-                    </li>
-
-                    <li class="rastro_item">
-                        <a href="{{route('ListaProfesores')}}" class="rastro_link">Lista de profesores</a>
-                    </li>
-
-                    <li class="rastro_item">
-                        <a href="" class="rastro_link rastro_link_activo">Agregar Profesor</a>
-                    </li>
-
-                </ul>
-
-                <div class="nombre_usuario">
-                    <span>Nombre de usuario</span>
-                </div>
-            </div>
-
-
-
-
-        <!-- Lado izq. de la pagina, tiene una imagen vertical -->
-        <aside>
-
-            <div class="contenedor_imagen_vertical">
-
-                <img src="https://www.utp.ac.pa/sites/default/files/fisc-aniversario-2017.jpg" alt="" class="img_vertical">
-                <br>
-
-                <span class="txt_imagenVertical">Este sitio es mantenido por la Universidad Tecnológica de Panamá</span>
-                <br>
-                <a href="">Política de privacidad</a>
-
-            </div>
-
-        </aside>
-
-
-
-        <!---------------------------------------------------------------------------------------------------------------->
-        <!-- AQUI VA CONTENIDO DE LA PAGINA-->
-
-
-<div class="contenido">
-
-    <button type="button" class="btn btn-success float-right" >Cerrar Sesión</button>
+<div class="mt-5">
 
 <form action="ingresar_profesores" method="POST" class="form-register">
 @csrf
-<h2 class="tit1">Registrar Profesor</h2>
+<h2>Registrar Profesor</h2>
 <div class="contenedor-inputs">
 @if ($errors->any())
                       <Div class="alert alert-danger">
@@ -105,7 +26,7 @@ Cédula:<input type="text" required="required" name="cedula" placeholder="Ingres
 Telefono:<input type="text" required="required" name="telefono" placeholder="Ingrese el Telefono" class="input-100" required>
 Correo:<input type="text" required="required" name="correo" placeholder="Ingrese el Correo" class="input-100" required>
 
-<div class="form-group col-md-4">
+<div class="form-group col-md-6">
     <label for="inputState">Sede: </label>
     <select id="inputState" name="id_sede" class="form-control">
         <option disabled selected>Ninguno seleccionado</option>
@@ -121,7 +42,8 @@ Correo:<input type="text" required="required" name="correo" placeholder="Ingrese
   </div>
 
 
-<input type="submit" value="Registrar" class="btn-enviar">
+<input type="submit" value="Registrar" class="btn btn-primary ">
+
  </div>
 
 
@@ -129,16 +51,9 @@ Correo:<input type="text" required="required" name="correo" placeholder="Ingrese
 </form>
 
 
-<div >
-    <a href="{{route('MenuEncuesta')}}" class="btn btn-success">Volver</a>
+    <a href="{{route('ListaProfesores')}}" class="btn btn-primary m-4">Volver</a>
 
-</div>
 
   </div>
 
-
-
-
-
-</body>
-</html>
+@endsection
