@@ -101,13 +101,12 @@
 
                     </div>
 
+                    <div class="text-center">
+              <a href="{{route('MenuEncuesta')}}" class="btn btn-primary ml-4">Volver</a>
+
+                    </div>
             </form>
 
-            <div class="botonvolver">
-
-              <a href="{{route('MenuEncuesta')}}" class="btn btn-success btn-lg ml-4">Volver</a>
-
-            </div>
 
     <script src="{{ asset('js/adicionarPregunta.js') }}"></script>
 
