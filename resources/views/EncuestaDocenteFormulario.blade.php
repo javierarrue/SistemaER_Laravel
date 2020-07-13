@@ -55,36 +55,49 @@
                         <input type="hidden" name="<?php echo $indice;?>[id_pregunta]" value="<?php echo $idPregunta?>">
 
 
-                        <b><?php echo $indice;?> </b> &nbsp&nbsp&nbsp {{ $pregunta->descrip_preg }}
+                        <b><?php echo $indice;?> </b> &nbsp&nbsp&nbsp {{ $pregunta->descrip_preg }} {{$pregunta->cod_preg}}
                         <!-- Luego verifico, si el campo de descrip_opcion es diferente a ''
                         Si esta vacio esto significa que esta pregunta no tiene opciones.-->
                         <?php
-                        if( $pregunta->descrip_opcion <>''):
+                        if( $pregunta->cod_preg <>'A'):
                             $indice2 = 0;
                         ?>
+                        <!--PREGUNTA CERRADA -->
                         <!-- Tipo de respuesta-->
                         <input type="hidden" name="<?php echo $indice;?>[tipo_resp]" value="cerrado">
                         <br><span>Seleccione al menos una opcion</span>
                             @foreach ($preguntas as $pregunta)
                                 <!--OPCIONES DE PREGUNTAS-->
                                 <?php
-                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->descrip_opcion <>''):
+                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->cod_preg <>'A'):
                                 ?>
                                     <div class="form-check">
 
                                         @if($pregunta->descrip_opcion == "Otros escriba")
-
+                                        <!--Tiene un campo para escribir -->
                                         {{$pregunta->descrip_opcion}} <?php $idPregunta?>
                                         <input type="text" class="form-control" name="<?php echo $indice;?>[respuesta]" value=" ">
                                         <input type="hidden" name="<?php echo $indice;?>[id_opcion_escribir]" value="{{$pregunta->id_opcion}}">
                                         <input type="hidden" value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion<?php echo $indice2;?>]">
 
                                         @else
-                                        <input value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion<?php echo $indice2;?>]" class="form-check-input" type="checkbox" id="defaultCheck<?php echo $indice2;?>">
+                                            <!--Es CHECK o RADIO BUTTON -->
+                                            @if($pregunta->cod_preg == "CR")
+                                                <!--RADIO BUTTON -->
+                                                <input value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion0]" type="radio" id="radio<?php echo $indice2;?>">
+                                                <label class="form-check-label" for="radio<?php echo $indice2;?>">
+                                                    {{$pregunta->descrip_opcion}} <?php $idPregunta?>
+                                                </label>
 
-                                        <label class="form-check-label" for="defaultCheck<?php echo $indice2;?>">
-                                            {{$pregunta->descrip_opcion}} <?php $idPregunta?>
-                                        </label>
+                                            @else
+                                                <!--CHECKBOX -->
+                                                <input value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion<?php echo $indice2;?>]" class="form-check-input" type="checkbox" id="defaultCheck<?php echo $indice2;?>">
+
+                                                <label class="form-check-label" for="defaultCheck<?php echo $indice2;?>">
+                                                    {{$pregunta->descrip_opcion}} <?php $idPregunta?>
+                                                </label>
+
+                                            @endif
 
                                         @endif
 
@@ -97,14 +110,14 @@
                             <input type="hidden" name="<?php echo $indice;?>[cant_opciones]" value="<?php echo $indice2;?>">
 
                             <!-- Si esta vacio muestro un input.-->
-                            <?php else: ?>
+                        <?php else: ?>
                             <!-- Tipo de respuesta-->
                                 <input type="hidden" name="<?php echo $indice;?>[tipo_resp]" value="abierta">
                                 <!--ID DE SECCION -->
                                 <input type="hidden" name="<?php echo $indice;?>[id_opcion0]" value="140">
-                                <!--DESCRIP_RESPUESTA-->
+                                <!--CAMPO PARA RESPONDER-->
                                 <input type="text" class="form-control" name="<?php echo $indice;?>[descrip_resp]" required>
-                            <?php endif ?>
+                        <?php endif ?>
 
                             <!--ID DE ASIGNATURA-->
                             <input type="hidden" name="<?php echo $indice;?>[id_asignatura]" value="<?php echo  $id_asignatura ?>">
@@ -117,8 +130,6 @@
                         ?>
                         </div>
                     <?php endif ?>
-
-
 
             @endforeach
 

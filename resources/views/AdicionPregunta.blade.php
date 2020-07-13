@@ -30,7 +30,7 @@
 
                             <option disabled selected>Ninguno seleccionado</option>
                             <option value="A">Pregunta Abierta</option>
-                            <option value="B">Pregunta Cerrada</option>
+                            <option>Pregunta Cerrada</option>
 
                         </select> <br><br>
 
@@ -52,6 +52,20 @@
 
                             <!--Si es una pregunta CERRADA, se muestra este DIV-->
                             <div id="preguntaCerrada">
+
+                            <p><b>Indique el tipo de seleccion:</b></p>
+                                <!--
+                                    A = Pregunta bierta
+                                    CR = Seleccion con radio button (una sola seleccion)
+                                    CC = Seleccion con select (seleccion multiple)
+                                -->
+
+                                <input type="radio" name="cod_preg" value="CR" id="CR">
+                                <label for="CR">Una sola selección</label></br>
+
+                                <input type="radio" name="cod_preg" value="CC" id="CC">
+                                <label for="CC">Seleccion múltiple</label></br>
+
                                 <h5>Respuestas</h5>
                               <!--BOTON QUE SE ENCARGA DE AÑADIR RESPUESTA
                                 mediante el onclick-->
