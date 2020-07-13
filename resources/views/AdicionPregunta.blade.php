@@ -47,7 +47,7 @@
                             </select> <br><br>
 
                             <b>Pregunta a agregar:</b>
-                            <input type="text" required name="descrip_preg" placeholder="Ingrese la pregunta" class="input-102" required>
+                            <input type="text" required name="descrip_preg" placeholder="Ingrese la pregunta" class="form-control" required>
 
 
                             <!--Si es una pregunta CERRADA, se muestra este DIV-->
@@ -60,17 +60,31 @@
                                     CC = Seleccion con select (seleccion multiple)
                                 -->
 
-                                <input type="radio" name="cod_preg" value="CR" id="CR">
-                                <label for="CR">Una sola selección</label></br>
+                                <input type="radio" name="cod_preg" value="CR" id="CR" required>
+                                <label for="CR">Una sola selección
+                                    <span class="tooltip1">?
+                                    <span class="tooltiptext">El docente podra seleccionar una sola opcion</span>
+                                    </span>
 
-                                <input type="radio" name="cod_preg" value="CC" id="CC">
-                                <label for="CC">Seleccion múltiple</label></br>
+                                </label></br>
+
+                                <input type="radio" name="cod_preg" value="CC" id="CC" required>
+                                <label for="CC">Seleccion múltiple
+                                    <span class="tooltip2">?
+                                    <span class="tooltiptext">El docente podra seleccionar varias opciones</span>
+                                    </span>
+
+                                </label></br>
 
                                 <h5>Respuestas</h5>
                               <!--BOTON QUE SE ENCARGA DE AÑADIR RESPUESTA
                                 mediante el onclick-->
                                 <button type="button" class="btn btn-primary mb-1" id="añadirRespuesta" onclick="agregarRespuesta()">
                                     Añadir respuesta
+                                </button>
+
+                                <button type="button" class="btn btn-primary mb-1" id="añadirCampo" onclick="agregarCampo()">
+                                    Añadir campo para escribir
                                 </button>
 
                                 <!--En este DIV se incertan los nuevos campos para las respuestas-->

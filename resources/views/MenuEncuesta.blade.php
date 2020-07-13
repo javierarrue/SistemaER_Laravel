@@ -72,7 +72,7 @@
                     </div>
                     <div class="centrado">
                         <h6 class="card-title">Lista de profesores</h6>
-                        <a href="{{route('ListaProfesores')}}" class="btn btn-primary">accecder</a>
+                        <a href="{{route('ListaProfesores')}}" class="btn btn-primary">Acceder</a>
                     </div>
                 </div>
             </div>

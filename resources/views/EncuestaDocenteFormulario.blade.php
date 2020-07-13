@@ -55,7 +55,7 @@
                         <input type="hidden" name="<?php echo $indice;?>[id_pregunta]" value="<?php echo $idPregunta?>">
 
 
-                        <b><?php echo $indice;?> </b> &nbsp&nbsp&nbsp {{ $pregunta->descrip_preg }} {{$pregunta->cod_preg}}
+                        <b><?php echo $indice;?> </b> &nbsp&nbsp&nbsp {{ $pregunta->descrip_preg }}
                         <!-- Luego verifico, si el campo de descrip_opcion es diferente a ''
                         Si esta vacio esto significa que esta pregunta no tiene opciones.-->
                         <?php
