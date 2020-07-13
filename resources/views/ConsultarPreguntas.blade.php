@@ -13,12 +13,11 @@
 
 
         <h1 class="text-center text-success">Consulta de Preguntas</h1>
+        <h6  class="text-center">Click en una pregunta para ver sus respuestas</h6>
         <br>
         <br>
                 <!-- ACORDEON -->
                 <div class="container">
-
-                <h6>Click en una pregunta para ver sus respuestas</h6>
                     <div class="row">
                     <!-- Foreach para listar todas las preguntas-->
                     @foreach ($preguntas as $pregunta)

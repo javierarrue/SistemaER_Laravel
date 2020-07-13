@@ -13,7 +13,6 @@
 
   <link rel="stylesheet" href="{{asset('css_personal/MenuEncuesta.css')}}">
     <link rel="stylesheet" href="{{asset('css_personal/AdicionPregunta.css')}}">
-    <link rel="stylesheet" href="{{asset('css_personal/EliminarPregunta.css')}}">
     <link rel="stylesheet" href="{{asset('css_personal/MostrarProfesores.css')}}">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -18,7 +18,7 @@
                     {{session('status')}}
                 </div>
                 <hr class="my-3">
-            @endif
+        @endif
 
         @if ($errors->any())
                     <div class="alert alert-danger">
@@ -30,12 +30,17 @@
                     </div>
         @endif
 
+        <div class="alert alert-warning" role="alert">
+           Eliminar una pregunta quitara todo registro de esta en la base de datos.
+           La pregunta sera eliminada con todas sus respuestas relacionadas si tiene alguna.
+        </div>
+
             <h1 class="text-center text-success">Eliminar Preguntas</h1>
+            <h6  class="text-center">Click en una pregunta para ver sus respuestas</h6>
             <br>
             <br>
             <div class="container">
                 <!-- ACORDEON -->
-                <h6>Click en una pregunta para ver sus respuestas</h6>
                     <div class="row">
                     <!-- Foreach para listar todas las preguntas-->
                     @foreach ($preguntas as $pregunta)
@@ -43,7 +48,7 @@
                     ID de pregnta que traigo de la BD, puedes insertar una nueva carta.
                     Esto se hace debido a que la consulta de la BD trae resultados "repetidos"-->
                     <?php if($idPregunta !== $pregunta->id_pregunta): ?>
-                        <div class="col-md-11">
+                        <div class="col-md-12">
                             <div class="accordion" id="accordionExample">
                                 <div class="card">
                                     <div class="card-header" id="heading<?php echo $indice;?>">
