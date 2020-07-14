@@ -39,7 +39,8 @@ Route::get('EliminarPregunta','C_EliminarPregunta@Index')->name('EliminarPregunt
 Route::post('EliminarPregunta','C_EliminarPregunta@Delete');
 
 Route::get('ActualizarPregunta','C_ActualizarPregunta@Index')->name('ActualizarPregunta');
-Route::get('ActualizarPreguntaEditar','C_ActualizarPreguntaEditar@Index')->name('ActualizarPreguntaEditar');
+Route::get('ActualizarPreguntaEditar','C_ActualizarPreguntaEditar@Show')->name('ActualizarPreguntaEditar');
+Route::post('ActualizarPreguntaEditar','C_ActualizarPreguntaEditar@update');
 
 Route::get('ConsultarPreguntas','C_ConsultarPreguntas@Index')->name('ConsultarPreguntas');
 
