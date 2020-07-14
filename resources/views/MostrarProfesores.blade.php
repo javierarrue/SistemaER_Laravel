@@ -45,13 +45,13 @@
 
 </section>
 
-    <div class="botonvolver">
-    <a href="{{ url('ListaProfesores') }}" class="btn btn-primary btn-lg ml-4">Volver</a>
-    </div>
 
-    <div class="botonregistar">
-    <a href="{{ url('AgregarProfesor2') }}" class="btn btn-success mr-4">Registrar Profesores</a>
-    </div>
+    <a href="{{ url('ListaProfesores') }}" class="btn btn-primary m-4">Volver</a>
+
+
+
+    <a href="{{ url('ListaProfesores/AgregarProfesor') }}" class="btn btn-primary m-4 float-right">Registrar Profesores</a>
+
 
 
 </div>

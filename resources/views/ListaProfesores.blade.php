@@ -12,10 +12,10 @@
     <div class="mx-auto" style="width: 50%;">
 
 
-                <a href="{{route('AgregarProfesor')}}" class="btn btn-primary btn-block">
+                <a href="{{url('ListaProfesores/AgregarProfesor')}}" class="btn btn-primary btn-block">
                         Agregar Profesor
             </a>
-            <a href="{{route('MostrarProfesores')}}" class="btn btn-primary btn-block">
+            <a href="{{url('ListaProfesores/MostrarProfesores')}}" class="btn btn-primary btn-block">
                         Lista de Profesores
             </a>
 

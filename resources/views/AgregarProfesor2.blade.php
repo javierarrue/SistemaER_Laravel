@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{asset('css_personal/AgregarProfesor.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-       
+
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 
             <!-- Aqui van las imagenes de arriba-->
             <div class="imagenesHorizontales">
-                    
+
                 <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoUtp.png" alt=""></div>
                 <div class="contenedorImagen"> <img src="css_personal/Imagenes/img1.jpg" alt=""></div>
                 <div class="contenedorImagen"> <img src="css_personal/Imagenes/img2.jpg" alt=""></div>
@@ -28,37 +28,37 @@
                 <div class="contenedorImagen"> <img src="css_personal/Imagenes/logoFisc.png" alt=""></div>
 
             </div>
-    
+
         </header>
-    
+
         <!-- Menu de rastros-->
 
             <div class="contenedor_menu_rastros">
-    
+
                 <ul class="menu_rastros">
-        
+
                     <li class="rastro_item">
                         <a href="{{route('MenuEncuesta')}}" class="rastro_link">Menú</a>
                     </li>
-            
+
                     <li class="rastro_item">
                         <a href="{{route('ListaProfesores')}}" class="rastro_link">Lista de profesores</a>
                     </li>
-            
+
                     <li class="rastro_item">
                         <a href="" class="rastro_link rastro_link_activo">Agregar Profesor</a>
                     </li>
-            
+
                 </ul>
-    
+
                 <div class="nombre_usuario">
                     <span>Nombre de usuario</span>
                 </div>
             </div>
-   
 
-    
-    
+
+
+
         <!-- Lado izq. de la pagina, tiene una imagen vertical -->
         <aside>
 
@@ -75,8 +75,8 @@
 
         </aside>
 
-        
-    
+
+
         <!---------------------------------------------------------------------------------------------------------------->
         <!-- AQUI VA CONTENIDO DE LA PAGINA-->
 
@@ -96,7 +96,7 @@
                              <Li>{{$error}}</Li>
                              @endforeach
                          </Ul>
-                      
+
                       </Div>
 @endif
 Nombre:<input type="text" required="required" name="nombre" placeholder="Ingrese el Nombre" class="input-50" required>
@@ -108,7 +108,7 @@ Correo:<input type="text" required="required" name="correo" placeholder="Ingrese
 <div class="form-group col-md-4">
     <label for="inputState">Sede: </label>
     <select id="inputState" name="id_sede" class="form-control">
-    <option disabled selected>Ninguno seleccionado</option>               
+    <option disabled selected>Ninguno seleccionado</option>
         <option value="1">Campus Metropolitano “Dr. Víctor Levi Sasso”</option>
         <option value="2">Centro Regional de Azuero</option>
         <option value="3">Centro Regional de Bocas del Toro</option>
@@ -122,15 +122,15 @@ Correo:<input type="text" required="required" name="correo" placeholder="Ingrese
 
 
 <input type="submit" value="Registrar" class="btn-enviar">
- </div> 
+ </div>
 
 
 
 </form>
 
 
-<div > 
-    <a href="{{route('MostrarProfesores')}}" class="btn btn-success">Volver</a>
+<div >
+    <a href="{{url('ListaProfesores/MostrarProfesores')}}" class="btn btn-success">Volver</a>
 
 </div>
 
@@ -139,6 +139,6 @@ Correo:<input type="text" required="required" name="correo" placeholder="Ingrese
 
 
 
-    
+
 </body>
 </html>
