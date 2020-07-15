@@ -103,7 +103,7 @@
                                     @else
                                     <br><br>
                                     <div class="alert alert-warning" role="alert">
-                                        <h5>Prgunta de tipo 'Abierta'</h5>
+                                        <h5>Pregunta de tipo 'Abierta'</h5>
                                         <h8>Las preguntas de tipo abierta no contienen opciones.</h8>
                                     </div>
                                     @endif

@@ -32,7 +32,7 @@ class C_AgregarProfesor extends Controller
 
              $this->idactualizar($ced, $saved);
 
-             return redirect('MostrarProfesores')->with('status', 'El profesor se ingreso correctamente');
+             return redirect('ListaProfesores/MostrarProfesores')->with('status', 'El profesor se ingreso correctamente');
            } else {
 
             return redirect()->back()->withInput()->withErrors('EL PROFESOR COMO USUARIO NO ESTA REGISTRADO');

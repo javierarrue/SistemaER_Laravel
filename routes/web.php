@@ -27,7 +27,7 @@ Route::get('MenuEncuesta','C_MenuEncuesta@Index')->name('MenuEncuesta');
 Route::get('ListaProfesores','C_ListaProfesores@Index')->name('ListaProfesores');
 Route::get('ListaProfesores/AgregarProfesor', 'C_AgregarProfesor@AgregarProfesor');
 Route::get('ListaProfesores/MostrarProfesores', 'C_MostrarProfesores@MostrarProfesores');
-Route::post('ingresar_profesores', 'C_AgregarProfesor@Store');
+Route::post('ListaProfesores/ingresar_profesores', 'C_AgregarProfesor@Store');
 //Route::get('AgregarProfesor2', 'C_AgregarProfesor2@AgregarProfesor2')->name('AgregarProfesor2');
 //---------------------------------------------------------
 

@@ -60,7 +60,7 @@
                                     CC = Seleccion con select (seleccion multiple)
                                 -->
 
-                                <input type="radio" name="cod_preg" value="CR" id="CR" required>
+                                <input type="radio" name="cod_preg" value="CR" id="CR">
                                 <label for="CR">Una sola selección
                                     <span class="tooltip1">?
                                     <span class="tooltiptext">El docente podra seleccionar una sola opcion</span>
@@ -68,7 +68,7 @@
 
                                 </label></br>
 
-                                <input type="radio" name="cod_preg" value="CC" id="CC" required>
+                                <input type="radio" name="cod_preg" value="CC" id="CC">
                                 <label for="CC">Seleccion múltiple
                                     <span class="tooltip2">?
                                     <span class="tooltiptext">El docente podra seleccionar varias opciones</span>
