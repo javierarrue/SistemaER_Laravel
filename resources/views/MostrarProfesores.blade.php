@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if(session('status'))
+                <div class="alert alert-success">
+                    {{session('status')}}
+                </div>
+                <hr class="my-3">
+ @endif
 
 <div class="contenido">
 <section id="container">
