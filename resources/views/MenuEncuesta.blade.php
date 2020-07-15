@@ -4,7 +4,7 @@
 @section('content')
 
 
-<h1 class="text-success" style="margin-left:-25%;">Menú de Encuestas</h1>
+<h1 class="text-success" style="margin-left:-25%;">Menú de Encuestas a Docentes</h1>
 
 <div class="container">
 
