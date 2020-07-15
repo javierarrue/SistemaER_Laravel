@@ -33,8 +33,8 @@
                             <option>Pregunta Cerrada</option>
 
                         </select> <br><br>
-
                         <div id="agregarPregunta">
+
                         <!-- SIEMPRE ENVIARA ESTOS VALORES-->
                             <input type="hidden" name="id_encuesta" value="1">
 
@@ -65,7 +65,6 @@
                                     <span class="tooltip1">?
                                     <span class="tooltiptext">El docente podra seleccionar una sola opcion</span>
                                     </span>
-
                                 </label></br>
 
                                 <input type="radio" name="cod_preg" value="CC" id="CC">
@@ -79,6 +78,8 @@
                                 <h5>Respuestas</h5>
                               <!--BOTON QUE SE ENCARGA DE AÑADIR RESPUESTA
                                 mediante el onclick-->
+                                <input type="text" id="resp_0" class="form-control"><br>
+
                                 <button type="button" class="btn btn-primary mb-1" id="añadirRespuesta" onclick="agregarRespuesta()">
                                     Añadir respuesta
                                 </button>

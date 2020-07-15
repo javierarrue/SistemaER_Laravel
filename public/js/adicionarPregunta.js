@@ -68,10 +68,19 @@ function preguntaTipo(){
 
         agregarPregunta.style.display="block";
         preguntaCerrada.style.display="none";
+        document.getElementById("CR").required = false;
+        document.getElementById("CC").required = false;
+        document.getElementById("resp_0").required = false;
+
+        document.getElementById("CR").checked = false;
+        document.getElementById("CC").checked = false;
 
     }else if(texto=="Pregunta Cerrada"){
         agregarPregunta.style.display="block";
         preguntaCerrada.style.display="block";
+        document.getElementById("CR").required = true;
+        document.getElementById("CC").required = true;
+        document.getElementById("resp_0").required = true;
 
     }
 
