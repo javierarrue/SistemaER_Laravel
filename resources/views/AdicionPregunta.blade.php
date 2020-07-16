@@ -26,7 +26,7 @@
                     <div class="contenedor-inputs">
 
                         <h5>Tipo de pregunta a agregar</h5>
-                        <select name="cod_preg" id="tipoPregunta" onchange="preguntaTipo();"  class="custom-select" autofocus>
+                        <select name="tipo_preg" id="tipoPregunta" onchange="preguntaTipo();"  class="custom-select" autofocus>
 
                             <option disabled selected>Ninguno seleccionado</option>
                             <option value="A">Pregunta Abierta</option>
@@ -60,14 +60,14 @@
                                     CC = Seleccion con select (seleccion multiple)
                                 -->
 
-                                <input type="radio" name="cod_preg" value="CR" id="CR">
+                                <input type="radio" name="tipo_preg" value="CR" id="CR">
                                 <label for="CR">Una sola selección
                                     <span class="tooltip1">?
                                     <span class="tooltiptext">El docente podra seleccionar una sola opcion</span>
                                     </span>
                                 </label></br>
 
-                                <input type="radio" name="cod_preg" value="CC" id="CC">
+                                <input type="radio" name="tipo_preg" value="CC" id="CC">
                                 <label for="CC">Seleccion múltiple
                                     <span class="tooltip2">?
                                     <span class="tooltiptext">El docente podra seleccionar varias opciones</span>
@@ -79,6 +79,7 @@
                               <!--BOTON QUE SE ENCARGA DE AÑADIR RESPUESTA
                                 mediante el onclick-->
                                 <input type="text" id="resp_0" class="form-control"><br>
+                                <input type="text" id="resp_1" class="form-control"><br>
 
                                 <button type="button" class="btn btn-primary mb-1" id="añadirRespuesta" onclick="agregarRespuesta()">
                                     Añadir respuesta

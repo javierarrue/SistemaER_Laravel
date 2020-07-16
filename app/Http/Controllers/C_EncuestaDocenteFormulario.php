@@ -75,7 +75,7 @@ class C_EncuestaDocenteFormulario extends Controller
 
                 /*Consulto la tabla pregunta*/
                 $preguntas = DB::table('pregunta')
-                ->select('pregunta.id_pregunta','descrip_preg','cod_preg','descrip_opcion','id_opcion','id_seccion')
+                ->select('pregunta.id_pregunta','descrip_preg','tipo_preg','descrip_opcion','id_opcion','id_seccion')
                 ->Leftjoin('opciones','pregunta.id_pregunta','opciones.id_pregunta')
                 ->where('id_encuesta','=',1)
                 ->get();

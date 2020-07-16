@@ -1,5 +1,5 @@
 
-var indice = 1;
+var indice = 2;
 
 // DIV donde se estaran insertando los nuevos elementos.
 var respuestas = document.getElementById("respuestas");
@@ -71,6 +71,7 @@ function preguntaTipo(){
         document.getElementById("CR").required = false;
         document.getElementById("CC").required = false;
         document.getElementById("resp_0").required = false;
+        document.getElementById("resp_1").required = false;
 
         document.getElementById("CR").checked = false;
         document.getElementById("CC").checked = false;
@@ -81,6 +82,7 @@ function preguntaTipo(){
         document.getElementById("CR").required = true;
         document.getElementById("CC").required = true;
         document.getElementById("resp_0").required = true;
+        document.getElementById("resp_1").required = true;
 
     }
 

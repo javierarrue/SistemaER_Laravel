@@ -46,11 +46,11 @@
                                       <!-- Luego verifico, si el campo de descrip_opcion es diferente a ''
                                       Si esta vacio esto significa que esta pregunta no tiene opciones.-->
                                         <?php
-                                            if( $pregunta->cod_preg <> 'A'):
+                                            if( $pregunta->tipo_preg <> 'A'):
                                         ?>
                                         @foreach ($preguntas as $pregunta)
                                             <?php
-                                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->cod_preg <> 'A'):
+                                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->tipo_preg <> 'A'):
                                             ?>
                                                 </label>
                                                 <div class="list-group">

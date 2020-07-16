@@ -22,7 +22,7 @@
                             </div>
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>ID</th>
                                     <th>Pregunta</th>
                                     <th>Opción</th>
                                 </tr>
@@ -30,7 +30,7 @@
                             <!-- foreach para recorrer las peguntas de en la BD -->
                             @foreach ($preguntas as $pregunta)
                                 <tr>
-                                    <th><?php echo $i?></th>
+                                    <th>{{$pregunta->id_pregunta}}</th>
                                     <td>{{ $pregunta->descrip_preg }}</td>
                                     <th>
                                         <!-- En esta columna se declara un Form con botón para poder enviar el id a la

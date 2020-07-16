@@ -15,7 +15,7 @@ class C_ConsultarPreguntas extends Controller
         //$preguntas = Preguntas::select('id_pregunta','descrip_preg','cod_preg')->where('id_encuesta','=',1)->get();
 
         $preguntas = DB::table('pregunta')
-        ->select('pregunta.id_pregunta','descrip_preg','cod_preg','descrip_opcion')
+        ->select('pregunta.id_pregunta','descrip_preg','tipo_preg','descrip_opcion')
         ->Leftjoin('opciones','pregunta.id_pregunta','opciones.id_pregunta')
         ->where('id_encuesta','=',1)
         ->get();

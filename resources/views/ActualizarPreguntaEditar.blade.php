@@ -55,7 +55,7 @@
                                     </div>
                                 </form>
                                     <!-- Se valida si el tipo de pregunta es abierta o cerrada -->
-                                    @if(substr($aux->cod_preg,0,1) == "C")
+                                    @if(substr($aux->tipo_preg,0,1) == "C")
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-condensed table-hover">
                                             <thead>

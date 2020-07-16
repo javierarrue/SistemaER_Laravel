@@ -14,10 +14,9 @@
         <!-- AQUI VA CONTENIDO DE LA PAGINA-->
 
         @if(session('status'))
-                <div class="alert alert-success">
-                    {{session('status')}}
-                </div>
-                <hr class="my-3">
+                    <script>
+                        alert("La pregunta ha sido eliminada");
+                    </script>
         @endif
 
         @if ($errors->any())
@@ -30,15 +29,16 @@
                     </div>
         @endif
 
-        <div class="alert alert-warning" role="alert">
-           Eliminar una pregunta quitara todo registro de esta en la base de datos.
-           La pregunta sera eliminada con todas sus respuestas relacionadas si tiene alguna.
-        </div>
+
 
             <h1 class="text-center text-success">Eliminar Preguntas</h1>
             <h6  class="text-center">Click en una pregunta para ver sus respuestas</h6>
             <br>
             <br>
+            <div class="alert alert-warning" role="alert">
+           Eliminar una pregunta quitara todo registro de esta en la base de datos.
+           La pregunta sera eliminada con todas sus respuestas relacionadas si tiene alguna.
+        </div>
             <div class="container">
                 <!-- ACORDEON -->
                     <div class="row">
@@ -79,11 +79,11 @@
                                       <!-- Luego verifico, si el campo de descrip_opcion es diferente a ''
                                       Si esta vacio esto significa que esta pregunta no tiene opciones.-->
                                         <?php
-                                            if( $pregunta->cod_preg <>'A'):
+                                            if( $pregunta->tipo_preg <>'A'):
                                         ?>
                                         @foreach ($preguntas as $pregunta)
                                             <?php
-                                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->cod_preg <>'A'):
+                                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->tipo_preg <>'A'):
                                             ?>
                                                 </label>
                                                 <div class="list-group">

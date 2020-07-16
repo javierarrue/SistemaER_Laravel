@@ -23,8 +23,10 @@
                     </div>
                 @endif
 
-                   <center> <h2>Aplicación de la Encuesta</h2></center>
-                        <br><br>
+                   <center> <h2>Aplicación de la Encuesta</h2>
+                        <br>
+                        <b>A continuacion rellene todos los campos que se le presentan</b></span></center>
+                        <br>
                     <div class="form-row">
                         <!-- Asignaturas-->
                         <div class="form-group col-md-6">

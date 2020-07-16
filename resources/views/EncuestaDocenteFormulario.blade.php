@@ -59,7 +59,7 @@
                         <!-- Luego verifico, si el campo de descrip_opcion es diferente a ''
                         Si esta vacio esto significa que esta pregunta no tiene opciones.-->
                         <?php
-                        if( $pregunta->cod_preg <>'A'):
+                        if( $pregunta->tipo_preg <>'A'):
                             $indice2 = 0;
                         ?>
                         <!--PREGUNTA CERRADA -->
@@ -69,7 +69,7 @@
                             @foreach ($preguntas as $pregunta)
                                 <!--OPCIONES DE PREGUNTAS-->
                                 <?php
-                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->cod_preg <>'A'):
+                                if($idPregunta == $pregunta->id_pregunta AND $pregunta->tipo_preg <>'A'):
                                 ?>
                                     <div class="form-check">
 
@@ -82,7 +82,7 @@
 
                                         @else
                                             <!--Es CHECK o RADIO BUTTON -->
-                                            @if($pregunta->cod_preg == "CR")
+                                            @if($pregunta->tipo_preg == "CR")
                                                 <!--RADIO BUTTON -->
                                                 <input value="{{$pregunta->id_opcion}}" name="<?php echo $indice;?>[id_opcion0]" type="radio" id="radio<?php echo $indice2;?>">
                                                 <label class="form-check-label" for="radio<?php echo $indice2;?>">
