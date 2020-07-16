@@ -1,10 +1,15 @@
 
 @extends('layouts.PlantillaAdminEncuestaDocentes')
 
+
+@section('navbar')
+<h5 class="text-light mx-auto">Menú de Encuesta a Docentes</h5>
+@endsection('navbar')
+
 @section('content')
 
 
-<h1 class="text-success" style="margin-left:-25%;">Menú de Encuestas a Docentes</h1>
+<h1 class="text-success" style="margin-left:-25%;">Seleccione una Opción</h1>
 
 <div class="container">
 
