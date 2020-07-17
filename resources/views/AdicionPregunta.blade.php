@@ -78,8 +78,8 @@
                                 <h5>Respuestas</h5>
                               <!--BOTON QUE SE ENCARGA DE AÑADIR RESPUESTA
                                 mediante el onclick-->
-                                <input type="text" id="resp_0" class="form-control"><br>
-                                <input type="text" id="resp_1" class="form-control"><br>
+                                <input type="text" id="resp_0" name="opcion0" class="form-control"><br>
+                                <input type="text" id="resp_1" name="opcion1" class="form-control"><br>
 
                                 <button type="button" class="btn btn-primary mb-1" id="añadirRespuesta" onclick="agregarRespuesta()">
                                     Añadir respuesta

@@ -47,6 +47,7 @@ class C_AdicionarPregunta extends Controller
         OpcionesEncuestaDocente::insert($data);
 
         //Devolviendo un pequeño mensaje
+
         return redirect('AdicionarPregunta')->with('status','Pregunta añadida');
 
     }

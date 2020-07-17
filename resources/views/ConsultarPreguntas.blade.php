@@ -13,7 +13,7 @@
 
 
         <h1 class="text-center text-success">Consulta de Preguntas</h1>
-        <h6  class="text-center">Click en una pregunta para ver sus respuestas</h6>
+        <hr>
         <br>
         <br>
                 <!-- ACORDEON -->
@@ -21,23 +21,23 @@
                     <div class="row">
                     <!-- Foreach para listar todas las preguntas-->
                     @foreach ($preguntas as $pregunta)
+                    <hr>
                     <!-- mientras el idPregunta ( en la primera vuelta es -1) sea diferente al
                     ID de pregnta que traigo de la BD, puedes insertar una nueva carta.
                     Esto se hace debido a que la consulta de la BD trae resultados "repetidos"-->
                     <?php if($idPregunta !== $pregunta->id_pregunta): ?>
                         <div class="col-md-10">
-                            <div class="accordion" id="accordionExample">
-                                <div class="card">
-                                    <div class="card-header" id="heading<?php echo $indice;?>">
-                                    <h3 class="mb-0">
-                                        <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse<?php echo $indice;?>" aria-expanded="false" aria-controls="collapse<?php echo $indice;?>">
-                                        <b># <?php echo $indice;?> </b>{{ $pregunta->descrip_preg }}
-                                        </button>
-                                    </h3>
-                                    </div>
 
-                                    <div id="collapse<?php echo $indice;?>" class="collapse" aria-labelledby="heading<?php echo $indice;?>" data-parent="#accordionExample">
-                                    <div class="card-body">
+
+
+                                    <h5 class="mb-0">
+                                        <b># <?php echo $indice;?> </b>{{ $pregunta->descrip_preg }}
+
+                                    </h5>
+
+
+
+
                                     <!-- Ahora capturo del idPRegunta de la BD-->
                                       <?php
                                         $idPregunta = $pregunta->id_pregunta;
@@ -66,17 +66,13 @@
                                         <?php endif ?>
                                         </ul>
 
-                                    </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                         <!-- aumento el indice-->
                         <?php
                             $indice++;
                         ?>
                         <?php endif ?>
+
                     @endforeach
                     <a href="{{route('MenuEncuesta')}}" class="btn btn-primary btn-lg m-5">Volver</a>
                     </div>

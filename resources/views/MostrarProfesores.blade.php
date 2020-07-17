@@ -14,7 +14,7 @@
 
 <h1>Lista de Profesores</h1>
 @if ($profesor->isEmpty())
-                <div>No hay Mensajes</div>
+                <div>No hay registros</div>
             @else
 
 <table>

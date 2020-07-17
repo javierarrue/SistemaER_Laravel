@@ -14,22 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('MenuEncuesta');
+    return view('P_MenuInicial');
 });
 
 //Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 
-//Admin
+
+/*-----------------------------------------MODULO DE DOCENTES-------------------------------------------*/
+//////////////////////////////////////////Admin/////////////////////////////////////////////////
+Route::get('P_MenuInicial','C_PMenuInicial@Index')->name('P_MenuInicial');
+
 Route::get('MenuEncuesta','C_MenuEncuesta@Index')->name('MenuEncuesta');
 
-//-------------------------------------------------------
 Route::get('ListaProfesores','C_ListaProfesores@Index')->name('ListaProfesores');
 Route::get('ListaProfesores/AgregarProfesor', 'C_AgregarProfesor@AgregarProfesor');
 Route::get('ListaProfesores/MostrarProfesores', 'C_MostrarProfesores@MostrarProfesores');
 Route::post('ListaProfesores/ingresar_profesores', 'C_AgregarProfesor@Store');
-//Route::get('AgregarProfesor2', 'C_AgregarProfesor2@AgregarProfesor2')->name('AgregarProfesor2');
-//---------------------------------------------------------
 
 Route::get('AdicionarPregunta','C_Adicionarpregunta@Index')->name('AdicionarPregunta');
 Route::post('AdicionarPregunta','C_Adicionarpregunta@Store');
@@ -43,7 +43,7 @@ Route::post('ActualizarPreguntaEditar','C_ActualizarPreguntaEditar@update');
 
 Route::get('ConsultarPreguntas','C_ConsultarPreguntas@Index')->name('ConsultarPreguntas');
 
-//Docentes
+//////////////////Vista de Docentes/////////////////////////////////
 Route::get('MenuDocentes','C_MenuDocente@Index')->name('MenuDocentes');
 Route::post('MenuDocentes','C_MenuDocente@Store');
 
@@ -52,4 +52,6 @@ Route::get('EncuestaDocentes','C_EncuestaDocentes@Index')->name('EncuestaDocente
 Route::post('EncuestaDocenteFormulario','C_EncuestaDocenteFormulario@Index');
 Route::get('EncuestaDocenteFormulario','C_EncuestaDocenteFormulario@Index')->name('EncuestaDocenteFormulario');
 
+Route::get('P_ProfesoresRespondido','C_ProfesoresRespondido@Index')->name('P_ProfesoresRespondido');
 
+Route::get('P_ProfesoresSinResponder','C_ProfesoresSinResponder@Index')->name('P_ProfesoresSinResponder');

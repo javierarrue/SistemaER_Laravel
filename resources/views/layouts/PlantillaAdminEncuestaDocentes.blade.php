@@ -49,6 +49,10 @@
       <div class="navbar-nav">
         <img src="../icons/home.svg" alt="home SVG">
         <a class="nav-item nav-link" href="/modulos">INICIO</a>
+
+        <img src="../icons/cerrar_sesion.svg" alt="home SVG">
+        <a class="nav-item nav-link" href="#!">  CERRAR SESION</a>
+
       </div>
     </div>
   </nav>

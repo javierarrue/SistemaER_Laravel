@@ -86,7 +86,10 @@
         </div>
         <!---------------------------------------------------------------------------------------------------------------->
 
+
     </div>
+    <a href="{{route('P_MenuInicial')}}" class="btn btn-primary btn-lg ml-4">Volver</a>
     </div>
+
 @endsection
 
