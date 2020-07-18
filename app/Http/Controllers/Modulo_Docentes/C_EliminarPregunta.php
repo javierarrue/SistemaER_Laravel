@@ -42,7 +42,7 @@ class C_EliminarPregunta extends Controller
         ->delete();
 
         //Devolviendo con un pequeño mensaje
-        return redirect('EliminarPregunta')->with('status','Pregunta eliminada');
+        return redirect('EliminarPreguntaDocente')->with('status','Pregunta eliminada');
 
     }
 }

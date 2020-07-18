@@ -9,7 +9,7 @@
                 <hr class="my-3">
             @endif
 
-            <form action="AdicionarPregunta" method="POST" class="form-register">
+            <form action="AdicionarPreguntaDocente" method="POST" class="form-register">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">

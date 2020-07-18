@@ -56,7 +56,7 @@
                                         <button class="btn text-left" type="button" data-toggle="collapse" data-target="#collapse<?php echo $indice;?>" aria-expanded="false" aria-controls="collapse<?php echo $indice;?>" >
                                         <b># <?php echo $indice;?> </b>{{ $pregunta->descrip_preg }}
 
-                                        <form method="post" action="EliminarPregunta"  onsubmit="return confirm('Advertencia: Eliminaras todo registro de esta pregunta en la base de datos');">
+                                        <form method="post" action="EliminarPreguntaDocente"  onsubmit="return confirm('Advertencia: Eliminaras todo registro de esta pregunta en la base de datos');">
                                         @csrf
 
                                         <button type="submit" class="btn btn-danger float-right">Eliminar</button>

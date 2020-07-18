@@ -12,7 +12,7 @@
 
     <div class="mx-auto" style="width: 50%;">
 
-            <a href="{{url('MenuEncuesta')}}" class="btn btn-primary btn-block">
+            <a href="{{url('MenuEncuestaDocente')}}" class="btn btn-primary btn-block">
                         Mantenimiento
             </a>
             <a href="{{url('P_ProfesoresRespondido')}}" class="btn btn-primary btn-block">

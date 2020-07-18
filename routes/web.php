@@ -22,9 +22,9 @@ Route::get('/', function () {
 
 /*-----------------------------------------MODULO DE DOCENTES-------------------------------------------*/
 //////////////////////////////Vistas de Admin/////////////////////////////////////////////////
-Route::get('P_MenuInicial','Modulo_Docentes\C_PMenuInicial@Index')->name('P_MenuInicial');
+Route::get('P_MenuInicialDocente','Modulo_Docentes\C_PMenuInicial@Index')->name('P_MenuInicial');
 
-Route::get('MenuEncuesta','Modulo_Docentes\C_MenuEncuesta@Index')->name('MenuEncuesta');
+Route::get('MenuEncuestaDocente','Modulo_Docentes\C_MenuEncuesta@Index')->name('MenuEncuesta');
 
 //////////////////Profesores que respondieron encuesta/////////////////
 Route::get('P_ProfesoresRespondido','Modulo_Docentes\C_ProfesoresRespondido@Index')->name('P_ProfesoresRespondido');
@@ -32,20 +32,20 @@ Route::get('P_ProfesoresRespondido','Modulo_Docentes\C_ProfesoresRespondido@Inde
 Route::get('P_ProfesoresSinResponder','Modulo_Docentes\C_ProfesoresSinResponder@Index')->name('P_ProfesoresSinResponder');
 
 ///////////Actualizacion de una pregunta////////
-Route::get('ActualizarPregunta','Modulo_Docentes\C_ActualizarPregunta@Index')->name('ActualizarPregunta');
+Route::get('ActualizarPreguntaDocente','Modulo_Docentes\C_ActualizarPregunta@Index')->name('ActualizarPregunta');
 Route::get('ActualizarPreguntaEditar','Modulo_Docentes\C_ActualizarPreguntaEditar@Show')->name('ActualizarPreguntaEditar');
 Route::post('ActualizarPreguntaEditar','Modulo_Docentes\C_ActualizarPreguntaEditar@update');
 
 /////////Adicion de Pregunta/////////
-Route::get('AdicionarPregunta','Modulo_Docentes\C_Adicionarpregunta@Index')->name('AdicionarPregunta');
-Route::post('AdicionarPregunta','Modulo_Docentes\C_Adicionarpregunta@Store');
+Route::get('AdicionarPreguntaDocente','Modulo_Docentes\C_Adicionarpregunta@Index')->name('AdicionarPregunta');
+Route::post('AdicionarPreguntaDocente','Modulo_Docentes\C_Adicionarpregunta@Store');
 
 ///////Eliminacion de Pregunta////////
-Route::get('EliminarPregunta','Modulo_Docentes\C_EliminarPregunta@Index')->name('EliminarPregunta');
-Route::post('EliminarPregunta','Modulo_Docentes\C_EliminarPregunta@Delete');
+Route::get('EliminarPreguntaDocente','Modulo_Docentes\C_EliminarPregunta@Index')->name('EliminarPregunta');
+Route::post('EliminarPreguntaDocente','Modulo_Docentes\C_EliminarPregunta@Delete');
 
 ///////Consulta de Preguntas/////////
-Route::get('ConsultarPreguntas','Modulo_Docentes\C_ConsultarPreguntas@Index')->name('ConsultarPreguntas');
+Route::get('ConsultarPreguntasDocente','Modulo_Docentes\C_ConsultarPreguntas@Index')->name('ConsultarPreguntas');
 
 //////Menu de Listado de profesores///////////
 Route::get('ListaProfesores','Modulo_Docentes\C_ListaProfesores@Index')->name('ListaProfesores');

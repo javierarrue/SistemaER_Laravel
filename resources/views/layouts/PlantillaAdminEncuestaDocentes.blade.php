@@ -53,6 +53,7 @@ body{
   <!-- NAV PRINCIPAL -->
   <nav class="navbar navbar-light" style="background-color:#005B28;">
     <!-- Navbar content -->
+    <h5 class="text-light mx-auto">Modulo de Encuesta a Docentes</h5>
     @yield('navbar')
   </nav>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -67,13 +68,13 @@ body{
           MANTENIMIENTO
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="{{asset('P_MenuInicial')}}">Menu Inicial</a>
+        <a class="dropdown-item" href="{{asset('P_MenuInicialDocente')}}">Menu Inicial</a>
         <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{asset('ActualizarPregunta')}}">Actualizar pregunta</a>
+          <a class="dropdown-item" href="{{asset('ActualizarPreguntaDocente')}}">Actualizar pregunta</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{asset('AdicionarPregunta')}}">Añadir pregunta</a>
+          <a class="dropdown-item" href="{{asset('AdicionarPreguntaDocente')}}">Añadir pregunta</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{asset('EliminarPregunta')}}">Eliminar pregunta</a>
+          <a class="dropdown-item" href="{{asset('EliminarPreguntaDocente')}}">Eliminar pregunta</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{url('ListaProfesores/AgregarProfesor')}}">Agregar Docente</a>
         </div>
@@ -90,7 +91,7 @@ body{
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{{url('P_ProfesoresSinResponder')}}">Docentes que no han contestado encuesta</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{asset('ConsultarPreguntas')}}">Consultar Preguntas</a>
+          <a class="dropdown-item" href="{{asset('ConsultarPreguntasDocente')}}">Consultar Preguntas</a>
         </div>
       </li>
 

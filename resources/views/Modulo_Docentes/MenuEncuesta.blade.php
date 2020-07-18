@@ -3,7 +3,7 @@
 
 
 @section('navbar')
-<h5 class="text-light mx-auto">Menú de Encuesta a Docentes</h5>
+
 @endsection('navbar')
 
 @section('content')
@@ -22,7 +22,7 @@
                     </div>
                     <div class="centrado">
                         <h6 class="card-title">Actualización de Preguntas</h6>
-                        <a href="{{asset('ActualizarPregunta')}}" class="btn btn-primary">Acceder</a>
+                        <a href="{{asset('ActualizarPreguntaDocente')}}" class="btn btn-primary">Acceder</a>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="centrado">
                         <h6 class="card-title">Adición de Preguntas</h6>
-                        <a href="{{asset('AdicionarPregunta')}}" class="btn btn-primary">Acceder</a>
+                        <a href="{{asset('AdicionarPreguntaDocente')}}" class="btn btn-primary">Acceder</a>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="centrado">
                         <h6 class="card-title">Eliminación de Preguntas</h6>
-                        <a href="{{asset('EliminarPregunta')}}" class="btn btn-primary">Acceder</a>
+                        <a href="{{asset('EliminarPreguntaDocente')}}" class="btn btn-primary">Acceder</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="centrado">
                         <h6 class="card-title">Consultas de Preguntas</h6>
-                        <a href="{{asset('ConsultarPreguntas')}}" class="btn btn-primary">Acceder</a>
+                        <a href="{{asset('ConsultarPreguntasDocente')}}" class="btn btn-primary">Acceder</a>
                     </div>
                 </div>
             </div>
