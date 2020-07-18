@@ -17,7 +17,6 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 
 
@@ -57,10 +56,43 @@ body{
     @yield('navbar')
   </nav>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="display:flex; align-items: center; justify-content: center;">
       <div class="navbar-nav">
+
         <img src="../icons/home.svg" alt="home SVG">
-        <a class="nav-item nav-link" href="/modulos">INICIO</a>
+        <a class="nav-item nav-link  mr-3" href="/modulos">INICIO</a>
+
+        <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MANTENIMIENTO
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{{asset('P_MenuInicial')}}">Menu Inicial</a>
+        <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{asset('ActualizarPregunta')}}">Actualizar pregunta</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{asset('AdicionarPregunta')}}">Añadir pregunta</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{asset('EliminarPregunta')}}">Eliminar pregunta</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{url('ListaProfesores/AgregarProfesor')}}">Agregar Docente</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CONSULTAS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{url('ListaProfesores/MostrarProfesores')}}#">Lista de docentes</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{url('P_ProfesoresRespondido')}}">Docentes que han contestado encuesta</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{url('P_ProfesoresSinResponder')}}">Docentes que no han contestado encuesta</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{{asset('ConsultarPreguntas')}}">Consultar Preguntas</a>
+        </div>
+      </li>
 
         <img src="../icons/cerrar_sesion.svg" alt="home SVG">
         <a class="nav-item nav-link" href="#!">  CERRAR SESION</a>
@@ -85,6 +117,7 @@ body{
     </div>
   </div>
 </body>
+
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 @yield('scripts')
 </html>
