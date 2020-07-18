@@ -1,0 +1,127 @@
+
+
+
+
+/*-------------Contenedor principal-----------------*/
+
+.contenedor{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr); /*Usando grid para estructurar la pagina*/
+    grid-template-rows: repeat(3,auto);
+    /*Definiendo la esctructura de la pagina*/
+    grid-template-areas: "header header header header header"
+                          "menu_rastros menu_rastros menu_rastros menu_rastros menu_rastros"
+                          "verticall contenido contenido contenido contenido";
+}
+
+/*-------------Contenedor principal-----------------*/
+
+
+
+/*Contendor del contenido de la pagina*/
+.contenido{
+    margin-right: 20px;
+    grid-area:contenido;
+    background-color: rgb(253, 253, 253);
+    padding: 30px;
+
+}
+
+footer{
+
+    grid-area: footer;
+    background-color: rgb(226, 223, 223);;
+
+}
+
+/*------------------------------ RESPONSIVE ---------------------------*/
+/*Hay distintos @media para poder ajustar el tamaño de la imagen una vez empieza
+disminuir el tamaño del dispositivo*/
+@media screen and (max-width: 1426px)
+{
+    header img{
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width:970px)
+{
+    .nombre_usuario{
+        display: block;
+        position: relative;
+
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 948px)
+{
+    header img{
+        max-height: 80px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .contenedor{
+
+        /*Definiendo la esctructura de la pagina*/
+        grid-template-areas: "header header header header"
+                            "menu_rastros menu_rastros menu_rastros menu_rastros"
+                            "contenido contenido contenido contenido";
+
+    }
+
+    .contenedor_menu_rastros a
+    {
+        font-size: 13px;
+    }
+
+
+    .contenedor_imagen_vertical{
+        display: none;
+    }
+
+.contenido{
+    margin-right: 0;
+}
+
+header img{
+    max-height: 50px;
+}
+
+}
+
+@media screen and (max-width: 493px)
+{
+    .contenedor_menu_rastros a
+    {
+        font-size: 11px;
+    }
+
+    header img{
+        max-height: 30px;
+    }
+}
+
+/*--------------------------------- RESPONSIVE -----------------------------*/
+
+
+/* AQUI EMPIEZA LOS FILTROS */
+
+.años {
+    border: 3px solid black;
+    padding: 15px;
+}
+
+.botonRegresar
+{
+    position: absolute;
+    border-radius: 5px;
+    background-color: #005b28 ;
+    padding: 10px;
+    color: white;
+    text-align: left;
+}
+

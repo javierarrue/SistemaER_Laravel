@@ -1,0 +1,150 @@
+
+
+
+
+/*-------------Contenedor principal-----------------*/
+
+.contenedor, contenido{
+
+
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr); /*Usando grid para estructurar la pagina*/
+    grid-template-rows: repeat(3,auto);
+    /*Definiendo la esctructura de la pagina*/
+    grid-template-areas: "header header header header header"
+                          "menu_rastros menu_rastros menu_rastros menu_rastros menu_rastros"
+                          "verticall contenido contenido contenido contenido";
+
+}
+
+/*-------------Contenedor principal-----------------*/
+
+/*Contendor del contenido de la pagina*/
+.contenido{
+width:100%;
+overflow-y:auto;
+    margin-right: 20px;
+    grid-area:contenido;
+    background-color: rgb(253, 253, 253);
+    padding: 0px;
+
+
+}
+
+footer{
+
+    grid-area: footer;
+    background-color: rgb(226, 223, 223);;
+
+}
+
+/*-----aqui va menu encuestas----*/
+.row{
+
+ justify-content: center;
+ position:relative;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+
+
+    align-content: flex-start;
+top:27px;
+
+
+}
+.tit1{
+    text-align: center;
+
+    color: #005b28;
+
+}
+
+
+.inner img{
+    transition: all 1.5s ease;
+height:100px;
+width:100px;
+display:block;
+margin:auto;
+
+}
+
+.inner:hover img{
+    transform: scale(1.5);
+
+}
+
+
+
+.shadow{
+    width: 15rem;
+
+
+}
+
+
+.centrado{
+    text-align: center;
+
+}
+
+.inner{
+
+
+margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+background-color:#005b28 !important;
+border-color:white !important;
+}
+.btn-primary:hover{
+background-color:#08440f !important;
+}
+
+.inner4 img{
+
+    transition: all 1.5s ease;
+
+
+}
+.inner4:hover img{
+    transform: scale(1.5);
+}
+
+.inner5 img{
+transition: all 1.5s ease;
+
+}
+.inner5:hover img{
+    transform: scale(1.5);
+}
+
+.inner4{
+height:100px;
+width:100px;
+margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.inner5{
+height:100px;
+width:100px;
+margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.botonvolver{
+position: absolute;
+top: 94%;
+}

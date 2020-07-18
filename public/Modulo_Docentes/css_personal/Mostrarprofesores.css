@@ -1,0 +1,142 @@
+
+
+
+/*-------------Contenedor principal-----------------*/
+
+.contenedor{
+
+overflow-y: hidden;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr); /*Usando grid para estructurar la pagina*/
+    grid-template-rows: repeat(3,auto);
+    /*Definiendo la esctructura de la pagina*/
+    grid-template-areas: "header header header header header"
+                          "menu_rastros menu_rastros menu_rastros menu_rastros menu_rastros"
+                          "verticall contenido contenido contenido contenido";
+
+}
+
+
+
+
+/*Contendor del contenido de la pagina*/
+.contenido{
+width:100%;
+overflow-y:auto;
+    margin-right: 20px;
+    grid-area:contenido;
+    background-color: rgb(253, 253, 253);
+    padding: 0px;
+
+}
+
+.container h1{
+
+    font-size: 35px;
+    display:inline-block;
+}
+.btn_new{
+
+    display: inline-block;
+    background: #239baa;
+    color:#fff;
+    padding: 5px 25px;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+
+
+table{
+
+border-collapse: collapse;
+font-size: 17px;
+width: 100%;
+
+}
+
+table th{
+
+    text-align:left;
+    padding:10px;
+    background-color: #005b28;
+    color:#fff;
+}
+
+table tr:nth-child(odd){
+background-color: #EAEAE3;
+
+}
+
+table td{
+
+    padding:10px;
+}
+
+.link_edit{
+
+    color:blue;
+}
+.link_delete{
+
+    color:red;
+}
+
+
+
+    .botonvolver{
+        position: absolute;
+    top: 94%;
+    }
+
+
+    h1{
+        text-align: center;
+
+    color: #005b28;
+    }
+
+
+    .btn-success{
+        position: absolute;
+    top: 94%;
+    left:87%;
+    }
+
+/*aqui empieza el paginador*/
+.paginador ul{
+padding: 15px;
+list-style: none;
+background: #fff;
+margin-top: 9px;
+display: -webkit-box;
+display: -moz-flex;
+display: -o-flex;
+display: flex;
+justify-content: center;
+
+}
+
+.paginador a, .pageSelected{
+    columns: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 35px;
+
+
+}
+
+.paginador a:hover{
+    background:#ddd;
+}
+
+.pageSelected{
+    color:#fff;
+    background: #428bca;
+    border: 1px solid #428bca;
+}

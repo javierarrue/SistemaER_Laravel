@@ -11,9 +11,9 @@
   <title>Sistema Encuesta a Docentes</title>
 
 
-  <link rel="stylesheet" href="{{asset('css_personal/MenuEncuesta.css')}}">
-    <link rel="stylesheet" href="{{asset('css_personal/AdicionPregunta.css')}}">
-    <link rel="stylesheet" href="{{asset('css_personal/MostrarProfesores.css')}}">
+  <link rel="stylesheet" href="{{asset('Modulo_docentes/css_personal/MenuEncuesta.css')}}">
+    <link rel="stylesheet" href="{{asset('Modulo_docentes/css_personal/AdicionPregunta.css')}}">
+    <link rel="stylesheet" href="{{asset('Modulo_docentes/css_personal/MostrarProfesores.css')}}">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -32,6 +32,18 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
   @yield('styles')
+<style>
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+
 </head>
 <!-- UTP HEADER -->
 <header style="background-image: url(../imagenes/headerutp.jpg); background-repeat: no-repeat; background-size: cover; padding: 8.3%; ">
